@@ -1,0 +1,114 @@
+:root {
+  --darkerSaved: #0f0e16;
+  --darkSaved: #17141d;
+  --baseColorSaved: #1f1c28;
+  --specialColorSaved: #e52e71;
+  --mainColorSaved: #ff8a00;
+  --textSaved: #f3f4f7;
+  --subTextSaved: #536171;
+}
+html {
+  background-color: var(--subTextSaved);
+  scroll-behavior: smooth;
+  overflow-y: overlay;
+}
+.App {
+  font-family: "Montserrat", sans-serif;
+  background-color: var(--subTextSaved);
+  position: relative;
+}
+h2.pageTitle {
+  text-align: center;
+  font-size: 1.75rem;
+  font-family: sans-serif;
+  font-weight: 700;
+  color: rgb(74, 74, 74);
+  margin-bottom: 40px;
+}
+.colorHeader {
+  strong,
+  strong a {
+    background-image: linear-gradient(
+      90deg,
+      var(--mainColorSaved),
+      var(--specialColorSaved)
+    );
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-family: "Montserrat", sans-serif;
+  }
+  a {
+    transition: 0.2s ease-out;
+    color: var(--textSaved);
+
+    display: inline-block;
+    text-decoration: none;
+  }
+  a::after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 1px;
+    background-image: linear-gradient(
+      90deg,
+      var(--specialColorSaved),
+      var(--mainColorSaved)
+    );
+    transition: width 0.3s;
+  }
+  a:hover::after {
+    width: 100%;
+    transition: width 0.3s;
+  }
+  span {
+    font-size: 0.8rem;
+  }
+  i {
+    color: var(--specialColorSaved);
+  }
+}
+//pageTransition
+//fix the double appear pages bug
+.page {
+  // position: absolute;
+  // left: 0;
+  // right: 0;
+}
+/* simple - enter transition 300ms, exit 150ms */
+.fade-appear,
+.fade-enter {
+  opacity: 1;
+  z-index: 1;
+}
+.fade-appear-active,
+.fade-enter.fade-enter-active {
+  opacity: 1;
+  transition: opacity 150ms linear 150ms;
+}
+.fade-exit {
+  z-index: 0;
+  opacity: 0;
+}
+.fade-exit.fade-exit-active {
+  opacity: 0;
+  // transform: translate(0, -10px);
+  // transition: opacity 150ms linear, transform 150ms;
+}
+//topWave
+.TopWave {
+  margin-top: -10px;
+  max-width: 120%;
+  width: 120%;
+  margin-left: -20px;
+}
+
+@media only screen and (max-width: 768px) {
+  h2.pageTitle {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+  }
+ 
+  .page {
+    // padding-bottom: 60px;
+  }
+}

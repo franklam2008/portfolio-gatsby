@@ -1,33 +1,51 @@
 import { Link } from "gatsby"
+import frankIcon from "../images/frank.png"
 import PropTypes from "prop-types"
 import React from "react"
-
+import styled from "styled-components"
+import NavItems from "./navItems"
+import ContactNav from "./contactNav"
+const TopNavbarCSS = styled.nav`
+  background-color: var(--darkerSaved);
+  position: relative;
+  z-index: 5;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 100vw;
+  padding: 10px 20px;
+  .topNavLeft {
+    display: flex;
+    align-items: center;
+    img{
+      margin:0;
+    }
+    .navItemCon {
+      margin-left: 20px;
+      .navItem {
+        padding: 0 10px;
+        svg {
+          display: none;
+        }
+      }
+    }
+  }
+`
+const MainIcon = styled.img`
+  filter: brightness(0) invert(1);
+  max-width: 80px;
+`
 const Header = ({ siteTitle }) => (
-  <header
-    style={{
-      background: `rebeccapurple`,
-      marginBottom: `1.45rem`,
-    }}
-  >
-    <div
-      style={{
-        margin: `0 auto`,
-        maxWidth: 960,
-        padding: `1.45rem 1.0875rem`,
-      }}
-    >
-      <h1 style={{ margin: 0 }}>
-        <Link
-          to="/"
-          style={{
-            color: `white`,
-            textDecoration: `none`,
-          }}
-        >
-          {siteTitle}
+  <header>
+    <TopNavbarCSS>
+      <div className="topNavLeft">
+        <Link to="/">
+          <MainIcon src={frankIcon} alt="main Icon" />
         </Link>
-      </h1>
-    </div>
+        <NavItems />
+      </div>
+      <ContactNav />
+    </TopNavbarCSS>
   </header>
 )
 

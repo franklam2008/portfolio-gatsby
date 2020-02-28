@@ -1,0 +1,110 @@
+:root {
+  --darkerSaved: #0f0e16;
+  --darkSaved: #17141d;
+  --baseColorSaved: #1f1c28;
+  --specialColorSaved: #e52e71;
+  --mainColorSaved: #ff8a00;
+  --textSaved: #f3f4f7;
+  --subTextSaved: #536171;
+}
+
+html {
+  background-color: var(--subTextSaved);
+  scroll-behavior: smooth;
+  overflow-y: overlay;
+}
+
+.App {
+  font-family: "Montserrat", sans-serif;
+  background-color: var(--subTextSaved);
+  position: relative;
+}
+
+h2.pageTitle {
+  text-align: center;
+  font-size: 1.75rem;
+  font-family: sans-serif;
+  font-weight: 700;
+  color: #4a4a4a;
+  margin-bottom: 40px;
+}
+
+.colorHeader strong,
+.colorHeader strong a {
+  background-image: -webkit-gradient(linear, left top, right top, from(var(--mainColorSaved)), to(var(--specialColorSaved)));
+  background-image: linear-gradient(90deg, var(--mainColorSaved), var(--specialColorSaved));
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: "Montserrat", sans-serif;
+}
+
+.colorHeader a {
+  -webkit-transition: 0.2s ease-out;
+  transition: 0.2s ease-out;
+  color: var(--textSaved);
+  display: inline-block;
+  text-decoration: none;
+}
+
+.colorHeader a::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 1px;
+  background-image: -webkit-gradient(linear, left top, right top, from(var(--specialColorSaved)), to(var(--mainColorSaved)));
+  background-image: linear-gradient(90deg, var(--specialColorSaved), var(--mainColorSaved));
+  -webkit-transition: width 0.3s;
+  transition: width 0.3s;
+}
+
+.colorHeader a:hover::after {
+  width: 100%;
+  -webkit-transition: width 0.3s;
+  transition: width 0.3s;
+}
+
+.colorHeader span {
+  font-size: 0.8rem;
+}
+
+.colorHeader i {
+  color: var(--specialColorSaved);
+}
+
+/* simple - enter transition 300ms, exit 150ms */
+.fade-appear,
+.fade-enter {
+  opacity: 1;
+  z-index: 1;
+}
+
+.fade-appear-active,
+.fade-enter.fade-enter-active {
+  opacity: 1;
+  -webkit-transition: opacity 150ms linear 150ms;
+  transition: opacity 150ms linear 150ms;
+}
+
+.fade-exit {
+  z-index: 0;
+  opacity: 0;
+}
+
+.fade-exit.fade-exit-active {
+  opacity: 0;
+}
+
+.TopWave {
+  margin-top: -10px;
+  max-width: 120%;
+  width: 120%;
+  margin-left: -20px;
+}
+
+@media only screen and (max-width: 768px) {
+  h2.pageTitle {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+  }
+}
+/*# sourceMappingURL=app.css.map */
