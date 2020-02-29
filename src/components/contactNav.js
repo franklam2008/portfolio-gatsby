@@ -1,6 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 import { Menu, Icon } from "semantic-ui-react"
+import resume from "../images/Frank_Lam.pdf"
 const ContactNavCSS = styled.div`
   i {
     margin: 0.5em 0.5em;
@@ -22,8 +23,7 @@ export default function contactNav() {
   return (
     <ContactNavCSS className="ContactNav">
       <Menu.Item
-        // href={resume}
-        href="https://github.com/franklam2008"
+        href={resume}
         target="_blank"
         data-inverted=""
         data-tooltip="Resume"
