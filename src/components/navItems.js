@@ -1,6 +1,7 @@
 import React from "react"
 import { Link } from "gatsby"
 import styled from "styled-components"
+import { Icon } from "semantic-ui-react"
 const NavItemCon = styled.span`
   a {
     color: var(--textSaved);
@@ -37,19 +38,23 @@ export default function navItems() {
     <NavItemCon className="navItemCon">
       <Link className="navItem" to="/">
         {" "}
+        <Icon name="home" />
         <span>Home</span>
       </Link>
 
       <Link className="navItem" to="/projects/">
         {" "}
+        <Icon name="suitcase" />
         <span>My Work</span>
       </Link>
       <Link className="navItem" to="/skills/">
         {" "}
+        <Icon name="wrench" />
         <span>Skill Set</span>
       </Link>
       <Link className="navItem" to="/contact/">
         {" "}
+        <Icon name="mail outline" />
         <span>Contact</span>
       </Link>
     </NavItemCon>
