@@ -16,6 +16,7 @@ const LayoutCon = styled.div`
 `
 const Main = styled.div`
   flex: 1;
+  
 `
 const Footer = styled.div`
   text-align: right;
