@@ -15,7 +15,6 @@ export const useSiteMetadata = () => {
       }
     `
   )
-  console.log("site.siteMetadata", site.Icons)
 
   return site.Icons
 }

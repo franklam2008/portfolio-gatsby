@@ -13,7 +13,6 @@ export const useSiteMetadata = () => {
       }
     `
   )
-  console.log('site.siteMetadata',site.siteMetadata);
   
   return site.siteMetadata
 }
