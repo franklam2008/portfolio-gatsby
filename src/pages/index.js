@@ -17,7 +17,8 @@ const TopCon = styled.div`
   background-color: var(--darkerSaved);
   color: var(--textSaved);
   @media (max-width: 600px) {
-    padding-top: 150px;
+    padding-top: 120px;
+    padding-bottom: 50px;
   }
 `
 
@@ -25,7 +26,7 @@ const Title = styled.h1`
   font-size: 3.5em;
   margin: 0;
   @media (max-width: 600px) {
-    font-size: 2em;
+    font-size: 2.1em;
   }
 `
 const SubTitle = styled.h4`
@@ -33,7 +34,7 @@ const SubTitle = styled.h4`
   font-weight: 500;
   margin: 0;
   @media (max-width: 600px) {
-    font-size: 1em;
+    font-size: 1.2em;
   }
 `
 const ColorHeader = styled.h2`
@@ -42,21 +43,7 @@ const ColorHeader = styled.h2`
     margin-top: 10px;
   }
 `
-const TopWave = styled.img`
-  transform-origin: top;
-  animation: animateWave 3000ms cubic-bezier(0.23, 1, 0.32, 1) forwards;
-  @keyframes animateWave {
-    0% {
-      transform: scale(1, 0);
-    }
-    100% {
-      transform: scale(1, 1);
-    }
-  }
-  @media (min-width: 1100px) {
-    margin-bottom: -7vw;
-  }
-`
+
 const BottomCon = styled.div`
   flex: 1;
   display: flex;
@@ -76,7 +63,7 @@ const IndexPage = () => (
   <Layout>
     <SEO title="Home" />
 
-    <HomeCon className="">
+    <HomeCon className="page">
       <TopCon>
         <Container>
           <Grid>
@@ -94,10 +81,8 @@ const IndexPage = () => (
           </Grid>
         </Container>
       </TopCon>
-      <TopWave className="TopWave" src={wave} alt="wave" />
-
+      <img className="TopWave" src={wave} alt="wave" />
       <BottomCon>
-        {/* <TopWave /> */}
         <Container>
           <Grid>
             <HomeParagraph>
