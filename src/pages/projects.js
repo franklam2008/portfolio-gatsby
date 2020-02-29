@@ -11,6 +11,7 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Img from "gatsby-image"
 import wave from "../images/wave/topWave.svg"
+import wt from "../images/wtFrontPage.png"
 const ProjectsCon = styled.div`
   .gatsby-image-wrapper {
     width: 35px;
@@ -56,7 +57,7 @@ export default function projects({ data }) {
               integrates with Tidio and Zendesk for the support ticket system.`,
                 imgName: "wordPress1.png",
                 btnName: "Showcase",
-                btnHref: "https://github.com/franklam2008/Portfolio",
+                btnHref: wt,
               },
               {
                 title: "Node Js App",
