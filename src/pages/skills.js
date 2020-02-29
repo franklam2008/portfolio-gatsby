@@ -33,7 +33,6 @@ const Skill = styled.div`
 const Language = styled.p``
 
 export default function skills({ data }) {
-  console.log("log", data.allFile.edges)
   return (
     <Layout>
       <SEO title="Skills" />
