@@ -25,12 +25,13 @@ const Skill = styled.div`
   }
   @media (max-width: 600px) {
     .gatsby-image-wrapper {
-    height: 50px;
- 
-  }
+      height: 50px;
+    }
   }
 `
-const Language = styled.p``
+const Language = styled.p`
+  
+`
 
 export default function skills({ data }) {
   return (
@@ -51,6 +52,7 @@ export default function skills({ data }) {
             <Grid className="skills">
               {[
                 { name: "React", imgName: "react.png" },
+                { name: "Gatsby", imgName: "gatsby.png" },
                 { name: "JS ES6", imgName: "javaS.png" },
                 { name: "SCSS", imgName: "scss.png" },
                 { name: "Bootstrap 5", imgName: "bootstrap.png" },
@@ -91,6 +93,7 @@ export default function skills({ data }) {
               {[
                 { name: "Node JS", imgName: "node.png" },
                 { name: "Firebase", imgName: "firebase.png" },
+                { name: "Contentful", imgName: "contentful.png" },
                 { name: "MongoDB", imgName: "mongo.png" },
                 { name: "ExpressJS", imgName: "express.png" },
                 { name: "Git", imgName: "git.png" },

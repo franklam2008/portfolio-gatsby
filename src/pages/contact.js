@@ -4,6 +4,7 @@ import axios from "axios"
 import { useSiteMetadata } from "../hooks/use-site-metadata"
 
 import Layout from "../components/layout"
+import ContactNav from "../components/contactNav"
 import SEO from "../components/seo"
 import wave from "../images/wave/topWave.svg"
 import styled from "styled-components"
@@ -14,7 +15,7 @@ const ContactCon = styled.div`
     justify-content: center;
     text-align: center;
     a {
-      svg {
+      i {
         color: var(--darkerSaved);
         font-size: 1.5rem;
         margin: 0 10px;
@@ -41,6 +42,8 @@ export default () => {
   const nameInput = useRef()
   const phoneInput = useRef()
   const messageInput = useRef()
+  console.log(title);
+  
   return (
     <Layout>
       <SEO title="Contact" />
@@ -49,7 +52,6 @@ export default () => {
         <img className="TopWave" src={wave} alt="wave" />
         <Container>
           <h2 className="pageTitle">Contact Me</h2>
-          {title}
           <Form className="contactForm" onSubmit={handleForm}>
             <p>
               Let's talk! I would love to hear your project idea, I'll get the
@@ -114,7 +116,7 @@ export default () => {
             )}
             <span style={{ marginLeft: 10 }}>{formMsg}</span>
           </Form>
-
+          <ContactNav />
           <MadeWith>
             Made with <Icon name="heart" /> in Orlando, Florida
           </MadeWith>

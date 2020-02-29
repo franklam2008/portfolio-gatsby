@@ -1,4 +1,5 @@
 import React from "react"
+import { Link } from "gatsby"
 import styled from "styled-components"
 import {
   Button,
@@ -31,8 +32,18 @@ export default function projects({ data }) {
           <Card.Group centered>
             {[
               {
+                title: "React E-commerce",
+                meta: "React, Gatsby, Contentful",
+                text: `Media Single Page React Application built with FireBase authentication. Custom UX/UI design with Bootstrap. Hosting in serverless Netlify`,
+                imgName: "contentful.png",
+                btnName: "GitHub",
+                btnHref: "https://github.com/franklam2008/shop-gatsby",
+                btn2Name: "Live Site",
+                btn2Href: "https://shop-gatsby.netlify.com/",
+              },
+              {
                 title: "Media Application",
-                meta: "React, FireBase, SCSS",
+                meta: "React, FireBase, Bootstrap",
                 text: `Media Single Page React Application built with FireBase authentication. Custom UX/UI design with Bootstrap. Hosting in serverless Netlify`,
                 imgName: "react1.png",
                 btnName: "GitHub",
@@ -42,14 +53,16 @@ export default function projects({ data }) {
               },
               {
                 title: "this.Portfolio",
-                meta: "React, Semantic UI",
-                text: `React built portfolio with Semantic UI design. It is deployed in cPanel hosting server, FastComet`,
-                imgName: "js1.png",
+                meta: "React, Gatsby, Semantic UI",
+                text: `React built portfolio with Gatsby JS and Semantic UI design. It is deployed in a cPanel hosting server, FastComet`,
+                imgName: "gatsby.png",
                 btnName: "GitHub",
                 btnHref: "https://github.com/franklam2008/Portfolio",
+                btn2Name: "Live Site",
+                btn2Href: "/",
               },
               {
-                title: "Business Website",
+                title: "Business E-commerce",
                 meta: "WordPress, PHP",
                 text: ` WordPress built E-commerce website that generate over hundred
               thousand sales via the utilization of Getresponse and Pipedrive
@@ -65,7 +78,7 @@ export default function projects({ data }) {
                 text: `Handles API requests and submit to Airtable, Twilio and
               SendGrid. It also perform Web Scraping with Puppeteer in order
               to collect information from other existing website.`,
-                imgName: "node1.png",
+                imgName: "express.png",
                 btnName: "GitHub",
                 btnHref: "https://github.com/franklam2008/WebScrapingAPI",
               },
@@ -87,7 +100,7 @@ export default function projects({ data }) {
                   </Card.Content>
                   <Card.Content extra>
                     <div className="ui two buttons">
-                      <Button href={project.btnHref} basic color="grey">
+                      <Button href={project.btnHref} basic target="_blank" color="grey">
                         {project.btnName} <Icon name="caret right" />
                       </Button>
                       {project.btn2Name ? (
