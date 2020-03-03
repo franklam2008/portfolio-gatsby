@@ -45,10 +45,15 @@ const ColorHeader = styled.h2`
 `
 
 const BottomCon = styled.div`
+  position: relative;
   flex: 1;
   display: flex;
   justify-content: center;
   align-items: center;
+  .TopWave {
+    position: absolute;
+    top:0;
+  }
 `
 const HomeParagraph = styled.p`
   font-size: 1.3em;
@@ -81,8 +86,9 @@ const IndexPage = () => (
           </Grid>
         </Container>
       </TopCon>
-      <img className="TopWave" src={wave} alt="wave" />
       <BottomCon>
+        <img className="TopWave" src={wave} alt="wave" />
+
         <Container>
           <Grid>
             <HomeParagraph>

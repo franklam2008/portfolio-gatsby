@@ -13,9 +13,9 @@ import { Segment, Container, Label, Grid } from "semantic-ui-react"
 import wave from "../images/wave/topWave.svg"
 const Skill = styled.div`
   margin: 10px auto;
-  font-size: 1em;
   overflow: hidden;
-  text-align: center;
+  div {
+  }
   .gatsby-image-wrapper {
     margin-bottom: 5px;
     height: 70px;
@@ -25,12 +25,17 @@ const Skill = styled.div`
   }
   @media (max-width: 600px) {
     .gatsby-image-wrapper {
-      height: 50px;
+      height: 35px;
     }
   }
 `
-const Language = styled.p`
-  
+const Language = styled.p``
+const SkillName = styled.div`
+  text-align: center;
+  font-size: 1rem;
+  @media (max-width: 600px) {
+    font-size: 0.8rem;
+  }
 `
 
 export default function skills({ data }) {
@@ -69,8 +74,8 @@ export default function skills({ data }) {
                 const imgSrc = skillObj[0].node.childImageSharp.fluid
                 return (
                   <Grid.Column
-                    mobile={5}
-                    computer={4}
+                    mobile={4}
+                    computer={3}
                     largeScreen={2}
                     widescreen={2}
                     key={skill.name}
@@ -78,7 +83,7 @@ export default function skills({ data }) {
                     <Skill>
                       <Img fluid={imgSrc} alt={skill.title} />
                     </Skill>
-                    <div style={{ textAlign: "center" }}>{skill.name}</div>
+                    <SkillName>{skill.name}</SkillName>
                   </Grid.Column>
                 )
               })}
@@ -92,6 +97,7 @@ export default function skills({ data }) {
             <Grid className="skills">
               {[
                 { name: "Node JS", imgName: "node.png" },
+                { name: "Graphql", imgName: "graphql.png" },
                 { name: "Firebase", imgName: "firebase.png" },
                 { name: "Contentful", imgName: "contentful.png" },
                 { name: "MongoDB", imgName: "mongo.png" },
@@ -107,17 +113,16 @@ export default function skills({ data }) {
                 const imgSrc = skillObj[0].node.childImageSharp.fluid
                 return (
                   <Grid.Column
-                    mobile={5}
-                    computer={4}
+                    mobile={4}
+                    computer={3}
                     largeScreen={2}
                     widescreen={2}
                     key={skill.name}
-                    style={{ textAlign: "center" }}
                   >
                     <Skill>
                       <Img fluid={imgSrc} alt={skill.title} />
                     </Skill>
-                    <div style={{ textAlign: "center" }}>{skill.name}</div>
+                    <SkillName>{skill.name}</SkillName>
                   </Grid.Column>
                 )
               })}

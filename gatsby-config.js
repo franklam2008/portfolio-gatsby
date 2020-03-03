@@ -32,17 +32,14 @@ module.exports = {
         display: `minimal-ui`,
         icon: `src/images/image.png`, // This path is relative to the root of the site.
       },
-      
     },
-   {
+    {
       resolve: `gatsby-plugin-google-fonts`,
       options: {
-        fonts: [
-          `Montserrat`,
-        ],
-        display: 'swap'
-      }
-    }
+        fonts: [`Montserrat`],
+        display: "swap",
+      },
+    },
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
