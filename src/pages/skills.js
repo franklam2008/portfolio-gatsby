@@ -1,12 +1,7 @@
 import React from "react"
 import Img from "gatsby-image"
 import styled from "styled-components"
-// import { ReactComponent as TopWave } from "../images/topWave.svg";
-import {
-  // useStaticQuery,
-  graphql,
-  // Link
-} from "gatsby"
+import { graphql } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import { Segment, Container, Label, Grid } from "semantic-ui-react"
@@ -44,7 +39,6 @@ export default function skills({ data }) {
       <SEO title="Skills" />
       <div className="skillCon page">
         <div className="skillTopCon topCon"></div>
-        {/* <TopWave /> */}
         <img className="TopWave" src={wave} alt="wave" />
 
         <Container className="skillSetCon">

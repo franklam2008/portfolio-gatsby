@@ -33,7 +33,7 @@ export default function projects({ data }) {
               {
                 title: "React E-commerce",
                 meta: "React, Gatsby, Contentful",
-                text: `Media Single Page React Application built with FireBase authentication. Custom UX/UI design with Bootstrap. Hosting in serverless Netlify`,
+                text: `Gatsby built E-commerce website with lightspeed load time and custom SEO for excellent user experience, manage product inventory with Contentful Graphql API.`,
                 imgName: "contentful.png",
                 btnName: "GitHub",
                 btnHref: "https://github.com/franklam2008/shop-gatsby",
@@ -43,7 +43,7 @@ export default function projects({ data }) {
               {
                 title: "Media Application",
                 meta: "React, FireBase, Bootstrap",
-                text: `Media Single Page React Application built with FireBase authentication. Custom UX/UI design with Bootstrap. Hosting in serverless Netlify`,
+                text: `Media Single Page React Application built with FireBase authentication. Custom UX/UI design with Bootstrap. Hosting in serverless Netlify.`,
                 imgName: "react1.png",
                 btnName: "GitHub",
                 btnHref: "https://github.com/franklam2008/Media-Application",
@@ -53,7 +53,7 @@ export default function projects({ data }) {
               {
                 title: "this.Portfolio",
                 meta: "React, Gatsby, Semantic UI",
-                text: `React built portfolio with Gatsby JS and Semantic UI design. It is deployed in a cPanel hosting server, FastComet`,
+                text: `React built portfolio with Gatsby JS and Semantic UI design. It is deployed in a cPanel hosting server, FastComet.`,
                 imgName: "gatsby.png",
                 btnName: "GitHub",
                 btnHref: "https://github.com/franklam2008/Portfolio",
@@ -99,7 +99,12 @@ export default function projects({ data }) {
                   </Card.Content>
                   <Card.Content extra>
                     <div className="ui two buttons">
-                      <Button href={project.btnHref} basic target="_blank" color="grey">
+                      <Button
+                        href={project.btnHref}
+                        basic
+                        target="_blank"
+                        color="grey"
+                      >
                         {project.btnName} <Icon name="caret right" />
                       </Button>
                       {project.btn2Name ? (

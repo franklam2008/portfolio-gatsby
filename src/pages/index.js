@@ -92,7 +92,7 @@ const IndexPage = () => (
         <Container>
           <Grid>
             <HomeParagraph>
-              Since the beginning days of my self-taught programming career,
+              Since the beginning days of my programming career,
               I've been developing and building great products for businesses
               &amp; clients. My favorite technologies right now are: React.js,
               GraphQL, Node.js, and Firebase. I believe one of the main goals
