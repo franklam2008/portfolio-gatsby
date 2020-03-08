@@ -31,6 +31,16 @@ export default function projects({ data }) {
           <Card.Group centered>
             {[
               {
+                title: "Professional Business Dashboard",
+                meta: "React, Create-React-App, Material UI",
+                text: `React built professional business dashboard`,
+                imgName: "garden.png",
+                btnName: "GitHub",
+                btnHref: "https://github.com/franklam2008/business-dashboard",
+                btn2Name: "Live Site",
+                btn2Href: "https://business-dashboard.netlify.com",
+              },
+              {
                 title: "React E-commerce",
                 meta: "React, Gatsby, Contentful",
                 text: `Gatsby built E-commerce website with lightspeed load time and custom SEO for excellent user experience, manage product inventory with Contentful Graphql API.`,
