@@ -94,7 +94,6 @@ export default function skills({ data }) {
                 { name: "Graphql", imgName: "graphql.png" },
                 { name: "Firebase", imgName: "firebase.png" },
                 { name: "Contentful", imgName: "contentful.png" },
-                { name: "MongoDB", imgName: "mongo.png" },
                 { name: "ExpressJS", imgName: "express.png" },
                 { name: "Git", imgName: "git.png" },
                 { name: "VS Code", imgName: "vs.png" },
