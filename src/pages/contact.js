@@ -10,10 +10,15 @@ import wave from "../images/wave/topWave.svg"
 import styled from "styled-components"
 import { Container, Checkbox, Form, Button, Icon } from "semantic-ui-react"
 const ContactCon = styled.div`
+ .contactForm{
+      max-width:500px;
+      margin: 0 auto;
+    }
   .ContactNav {
     margin: 20px auto;
     justify-content: center;
     text-align: center;
+   
     a {
       i {
         color: var(--darkerSaved);
@@ -105,8 +110,8 @@ export default () => {
                   />
                 </Form.Field>
                 <p>
-                  We'll never share your information with anyone else saving it
-                  in Airtable and send you a SMS and Email via Twilio and
+                  I'll never share your information with anyone else. it saves
+                  in Airtable securly and send you a SMS and Email via Twilio and
                   SendGrid API.
                 </p>
                 <Button type="submit">Submit</Button>
