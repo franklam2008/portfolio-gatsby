@@ -32,14 +32,14 @@ export default function projects({ data }) {
           <Card.Group centered>
             {[
               {
-                title: "Professional Business Dashboard",
+                title: "Professional Banking Dashboard",
                 meta: "React, Create-React-App, Material UI",
-                text: `React built professional business dashboard`,
+                text: `React built professional banking dashboard`,
                 imgName: "garden.png",
                 btnName: "GitHub",
-                btnHref: "https://github.com/franklam2008/business-dashboard",
+                btnHref: "https://github.com/franklam2008/banking-dashboard",
                 btn2Name: "Live Site",
-                btn2Href: "https://business-dashboard.netlify.com",
+                btn2Href: "https://banking-dashboard.netlify.com",
               },
               {
                 title: "React E-commerce",
