@@ -25,7 +25,6 @@ export default function projects({ data }) {
       <SEO title="Projects" />
       <ProjectsCon className=" page">
         <div className="projectsTopCon topCon"></div>
-        {/* <TopWave /> */}
         <img className="TopWave" src={wave} alt="wave" />
         <Container fluid>
           <h2 className="pageTitle">Projects</h2>
