@@ -74,7 +74,7 @@ const IndexPage = () => (
           <Grid>
             <Grid.Column md={6}>
               <SubTitle>Hi, I'm Frank!</SubTitle>
-              <Title>I build amazing experience</Title>
+              <Title>I build amazing experiences</Title>
               <SubTitle>Web Developer from Orlando, FL</SubTitle>
               <ColorHeader className="colorHeader">
                 <strong>

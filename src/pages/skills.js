@@ -32,7 +32,6 @@ const SkillName = styled.div`
     font-size: 0.8rem;
   }
 `
-
 export default function skills({ data }) {
   return (
     <Layout>
