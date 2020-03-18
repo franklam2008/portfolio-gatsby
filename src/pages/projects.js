@@ -51,6 +51,15 @@ export default function projects({ data }) {
                 btn2Href: "https://franklam.app/",
               },
               {
+                title: "this.Portfolio",
+                meta: "React, Gatsby, Semantic UI",
+                text: `React built portfolio with Gatsby JS and Semantic UI design. It is deployed in a cPanel hosting server, FastComet.`,
+                imgName: "gatsby.png",
+                btnName: "GitHub",
+                btnHref: "https://github.com/franklam2008/Portfolio",
+           
+              },
+              {
                 title: "React E-commerce",
                 meta: "React, Gatsby, Contentful",
                 text: `Gatsby built E-commerce website with lightspeed load time and custom SEO for excellent user experience, manage product inventory with Contentful Graphql API.`,
@@ -61,16 +70,6 @@ export default function projects({ data }) {
                 btn2Href: "https://shop-gatsby.netlify.com/",
               },
 
-              {
-                title: "this.Portfolio",
-                meta: "React, Gatsby, Semantic UI",
-                text: `React built portfolio with Gatsby JS and Semantic UI design. It is deployed in a cPanel hosting server, FastComet.`,
-                imgName: "gatsby.png",
-                btnName: "GitHub",
-                btnHref: "https://github.com/franklam2008/Portfolio",
-                btn2Name: "Live Site",
-                btn2Href: "/",
-              },
               {
                 title: "Business E-commerce",
                 meta: "WordPress, PHP",
