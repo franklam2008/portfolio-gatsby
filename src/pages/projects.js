@@ -57,7 +57,6 @@ export default function projects({ data }) {
                 imgName: "gatsby.png",
                 btnName: "GitHub",
                 btnHref: "https://github.com/franklam2008/Portfolio",
-           
               },
               {
                 title: "React E-commerce",
@@ -118,7 +117,12 @@ export default function projects({ data }) {
                         {project.btnName} <Icon name="caret right" />
                       </Button>
                       {project.btn2Name ? (
-                        <Button href={project.btn2Href} basic color="orange">
+                        <Button
+                          href={project.btn2Href}
+                          basic
+                          target="_blank"
+                          color="orange"
+                        >
                           {project.btn2Name}
                           <Icon name="caret right" />
                         </Button>
