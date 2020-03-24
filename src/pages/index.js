@@ -87,7 +87,7 @@ const IndexPage = () => (
         </Container>
       </TopCon>
       <BottomCon>
-        <img className="TopWave" src={wave} alt="wave" />
+        <img className="TopWave animated" src={wave} alt="wave" />
 
         <Container>
           <Grid>
