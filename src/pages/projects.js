@@ -33,7 +33,7 @@ export default function projects({ data }) {
               {
                 title: "Professional Banking Dashboard",
                 meta: "React, Create-React-App, Material UI",
-                text: `React built professional banking dashboard with Redux and Material UI design`,
+                text: `React built professional banking dashboard with Redux for state management and Material UI design`,
                 imgName: "garden.png",
                 btnName: "GitHub",
                 btnHref: "https://github.com/franklam2008/banking-dashboard",
