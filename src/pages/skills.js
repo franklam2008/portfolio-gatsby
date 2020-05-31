@@ -51,6 +51,9 @@ export default function skills({ data }) {
               {[
                 { name: "React", imgName: "react.png" },
                 { name: "Gatsby", imgName: "gatsby.png" },
+                { name: "Angular2", imgName: "angular.png" },
+                { name: "Ngrx", imgName: "ngrx.png" },
+                { name: "RxJS", imgName: "rxjs.png" },
                 { name: "JS ES6", imgName: "javaS.png" },
                 { name: "SCSS", imgName: "scss.png" },
                 { name: "Bootstrap 5", imgName: "bootstrap.png" },
@@ -58,6 +61,7 @@ export default function skills({ data }) {
                 { name: "HTML 5", imgName: "html.png" },
                 { name: "Jquery", imgName: "jquery.png" },
                 { name: "WordPress", imgName: "wordPress.png" },
+             
               ].map(skill => {
                 const skillObj = data.allFile.edges.filter(
                   ({ node: skillNode }) =>

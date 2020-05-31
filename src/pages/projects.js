@@ -13,6 +13,7 @@ import SEO from "../components/seo"
 import Img from "gatsby-image"
 import wave from "../images/wave/topWave.svg"
 import wt from "../images/wtFrontPage.png"
+import resume from "../images/Frank_Lam.pdf"
 const ProjectsCon = styled.div`
   .gatsby-image-wrapper {
     width: 35px;
@@ -27,7 +28,16 @@ export default function projects({ data }) {
         <div className="projectsTopCon topCon"></div>
         <img className="TopWave" src={wave} alt="wave" />
         <Container fluid>
-          <h2 className="pageTitle">Projects</h2>
+          <h2 className="pageTitle">
+            Projects <br />{" "}
+            <small className="colorHeader">
+              <strong>
+                <a href={resume} target="_blank">
+                  resume
+                </a>
+              </strong>
+            </small>{" "}
+          </h2>
           <Card.Group centered>
             {[
               {
