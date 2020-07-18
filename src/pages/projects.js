@@ -41,6 +41,16 @@ export default function projects({ data }) {
           <Card.Group centered>
             {[
               {
+                title: "Huntington Bank BAO",
+                meta: "Angular",
+                text: `Worked on Angular project for Huntington bank BAO flow. Wou;d not be able to display for obvious reason. Would love to answer if you have any questions.`,
+                imgName: "garden.png",
+                btnName: "GitHub",
+                btnHref: "https://github.com/franklam2008/banking-dashboard",
+                btn2Name: "Live Site",
+                btn2Href: "https://banking-dashboard.netlify.com",
+              },
+              {
                 title: "Professional Banking Dashboard",
                 meta: "React, Create-React-App, Material UI",
                 text: `React built professional banking dashboard with Redux for state management and Material UI design`,
