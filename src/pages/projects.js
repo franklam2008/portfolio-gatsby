@@ -43,12 +43,8 @@ export default function projects({ data }) {
               {
                 title: "Huntington Bank BAO",
                 meta: "Angular",
-                text: `Worked on Angular project for Huntington bank BAO flow. Wou;d not be able to display for obvious reason. Would love to answer if you have any questions.`,
-                imgName: "garden.png",
-                btnName: "GitHub",
-                btnHref: "https://github.com/franklam2008/banking-dashboard",
-                btn2Name: "Live Site",
-                btn2Href: "https://banking-dashboard.netlify.com",
+                text: `Worked on Angular project for Huntington bank BAO flow. Would not be able to showcase code for obvious reason. Would love to answer for any questions.`,
+                imgName: "hnb.png",
               },
               {
                 title: "Professional Banking Dashboard",
@@ -128,14 +124,17 @@ export default function projects({ data }) {
                   </Card.Content>
                   <Card.Content extra>
                     <div className="ui two buttons">
-                      <Button
-                        href={project.btnHref}
-                        basic
-                        target="_blank"
-                        color="grey"
-                      >
-                        {project.btnName} <Icon name="caret right" />
-                      </Button>
+                      {project.btnName ? (
+                        <Button
+                          href={project.btnHref}
+                          basic
+                          target="_blank"
+                          color="grey"
+                        >
+                          {project.btnName} <Icon name="caret right" />
+                        </Button>
+                      ) : null}
+
                       {project.btn2Name ? (
                         <Button
                           href={project.btn2Href}
