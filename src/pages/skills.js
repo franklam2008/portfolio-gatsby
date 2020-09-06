@@ -6,6 +6,11 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import { Segment, Container, Label, Grid } from "semantic-ui-react"
 import wave from "../images/wave/topWave.svg"
+import {
+  skillsFrontEndCon,
+  skillsBackEndCon,
+  skillsOthersCon,
+} from "./contents/content"
 const Skill = styled.div`
   margin: 10px auto;
   overflow: hidden;
@@ -48,21 +53,7 @@ export default function skills({ data }) {
               Front-End
             </Label>
             <Grid className="skills">
-              {[
-                { name: "React", imgName: "react.png" },
-                { name: "Gatsby", imgName: "gatsby.png" },
-                { name: "Angular2", imgName: "angular.png" },
-                { name: "Ngrx", imgName: "ngrx.png" },
-                { name: "RxJS", imgName: "rxjs.png" },
-                { name: "JS ES6", imgName: "javaS.png" },
-                { name: "SCSS", imgName: "scss.png" },
-                { name: "Bootstrap 5", imgName: "bootstrap.png" },
-                { name: "Adobe XD", imgName: "xd.png" },
-                { name: "HTML 5", imgName: "html.png" },
-                { name: "Jquery", imgName: "jquery.png" },
-                { name: "WordPress", imgName: "wordPress.png" },
-             
-              ].map(skill => {
+              {skillsFrontEndCon.map(skill => {
                 const skillObj = data.allFile.edges.filter(
                   ({ node: skillNode }) =>
                     skillNode.childImageSharp.fluid.originalName ===
@@ -78,7 +69,7 @@ export default function skills({ data }) {
                     key={skill.name}
                   >
                     <Skill>
-                      <Img fluid={imgSrc} alt={skill.title} />
+                      <Img fluid={imgSrc} alt={skill.name} />
                     </Skill>
                     <SkillName>{skill.name}</SkillName>
                   </Grid.Column>
@@ -92,15 +83,7 @@ export default function skills({ data }) {
               Back-End
             </Label>
             <Grid className="skills">
-              {[
-                { name: "Node JS", imgName: "node.png" },
-                { name: "Graphql", imgName: "graphql.png" },
-                { name: "Firebase", imgName: "firebase.png" },
-                { name: "Contentful", imgName: "contentful.png" },
-                { name: "ExpressJS", imgName: "express.png" },
-                { name: "Git", imgName: "git.png" },
-                { name: "VS Code", imgName: "vs.png" },
-              ].map(skill => {
+              {skillsBackEndCon.map(skill => {
                 const skillObj = data.allFile.edges.filter(
                   ({ node: skillNode }) =>
                     skillNode.childImageSharp.fluid.originalName ===
@@ -116,7 +99,36 @@ export default function skills({ data }) {
                     key={skill.name}
                   >
                     <Skill>
-                      <Img fluid={imgSrc} alt={skill.title} />
+                      <Img fluid={imgSrc} alt={skill.name} />
+                    </Skill>
+                    <SkillName>{skill.name}</SkillName>
+                  </Grid.Column>
+                )
+              })}
+            </Grid>
+          </Segment>
+          <Segment raised>
+            <Label as="a" color="yellow" ribbon>
+              Others
+            </Label>
+            <Grid className="skills">
+              {skillsOthersCon.map(skill => {
+                const skillObj = data.allFile.edges.filter(
+                  ({ node: skillNode }) =>
+                    skillNode.childImageSharp.fluid.originalName ===
+                    skill.imgName
+                )
+                const imgSrc = skillObj[0].node.childImageSharp.fluid
+                return (
+                  <Grid.Column
+                    mobile={4}
+                    computer={3}
+                    largeScreen={2}
+                    widescreen={2}
+                    key={skill.name}
+                  >
+                    <Skill>
+                      <Img fluid={imgSrc} alt={skill.name} />
                     </Skill>
                     <SkillName>{skill.name}</SkillName>
                   </Grid.Column>

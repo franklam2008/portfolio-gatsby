@@ -12,8 +12,8 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Img from "gatsby-image"
 import wave from "../images/wave/topWave.svg"
-import wt from "../images/wtFrontPage.png"
 import resume from "../images/Frank_Lam.pdf"
+import { projectsCon } from "./contents/content"
 const ProjectsCon = styled.div`
   .gatsby-image-wrapper {
     width: 35px;
@@ -39,74 +39,7 @@ export default function projects({ data }) {
             </small>{" "}
           </h2>
           <Card.Group centered>
-            {[
-              {
-                title: "Huntington Bank BAO",
-                meta: "Angular, Ngrx, RxJS",
-                text: `Worked on Angular project for Huntington bank BAO flow. Utilized Ngrx and RxJS for app state management. Unfortunately, I cannot showcase code here for obvious reason.`,
-                imgName: "hnb.png",
-              },
-              {
-                title: "Professional Banking Dashboard",
-                meta: "React, Create-React-App, Material UI",
-                text: `React built professional banking dashboard with Redux for state management and Material UI design`,
-                imgName: "garden.png",
-                btnName: "GitHub",
-                btnHref: "https://github.com/franklam2008/banking-dashboard",
-                btn2Name: "Live Site",
-                btn2Href: "https://banking-dashboard.netlify.com",
-              },
-              {
-                title: "Media Application",
-                meta: "React, FireBase, Bootstrap",
-                text: `Media Single Page React Application built with FireBase authentication. Custom UX/UI design with Bootstrap. Hosting in serverless Netlify.`,
-                imgName: "react1.png",
-                btnName: "GitHub",
-                btnHref: "https://github.com/franklam2008/Media-Application",
-                btn2Name: "Live Site",
-                btn2Href: "https://franklam.app/",
-              },
-              {
-                title: "this.Portfolio",
-                meta: "React, Gatsby, Semantic UI",
-                text: `React built portfolio with Gatsby JS and Semantic UI design. It is deployed in a cPanel hosting server, FastComet.`,
-                imgName: "gatsby.png",
-                btnName: "GitHub",
-                btnHref: "https://github.com/franklam2008/Portfolio",
-              },
-              {
-                title: "React E-commerce",
-                meta: "React, Gatsby, Contentful",
-                text: `Gatsby built E-commerce website with lightspeed load time and custom SEO for excellent user experience, manage product inventory with Contentful Graphql API.`,
-                imgName: "contentful.png",
-                btnName: "GitHub",
-                btnHref: "https://github.com/franklam2008/shop-gatsby",
-                btn2Name: "Live Site",
-                btn2Href: "https://shop-gatsby.netlify.com/",
-              },
-
-              {
-                title: "Business E-commerce",
-                meta: "WordPress, PHP",
-                text: ` WordPress built E-commerce website that generate over hundred
-              thousand sales via the utilization of Getresponse and Pipedrive
-              for custom HTML email marketing campaign and CRM. Live chat
-              integrates with Tidio and Zendesk for the support ticket system.`,
-                imgName: "wordPress1.png",
-                btnName: "Showcase",
-                btnHref: wt,
-              },
-              {
-                title: "Node Js App",
-                meta: "Node, Express, MongoDB",
-                text: `Handles API requests and submit to Airtable, Twilio and
-              SendGrid. It also perform Web Scraping with Puppeteer in order
-              to collect information from other existing website.`,
-                imgName: "express.png",
-                btnName: "GitHub",
-                btnHref: "https://github.com/franklam2008/WebScrapingAPI",
-              },
-            ].map(project => {
+            {projectsCon.map(project => {
               //getting imgSrc from dataObj
               const projectObj = data.allFile.edges.filter(
                 ({ node: projectNode }) =>
