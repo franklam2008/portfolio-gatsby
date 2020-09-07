@@ -78,7 +78,7 @@ const MainIcon = styled.img`
   filter: brightness(0) invert(1);
   max-width: 80px;
 `
-const Header = ({ siteTitle }) => (
+const Header = () => (
   <header>
     <TopNavbarCSS>
       <div className="topNavLeft">

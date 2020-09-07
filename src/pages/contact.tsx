@@ -1,7 +1,6 @@
 import React, { useState, useRef } from "react"
 import axios from "axios"
 
-
 import Layout from "../components/layout"
 import ContactNav from "../components/contactNav"
 import SEO from "../components/seo"
@@ -9,15 +8,15 @@ import wave from "../images/wave/topWave.svg"
 import styled from "styled-components"
 import { Container, Checkbox, Form, Button, Icon } from "semantic-ui-react"
 const ContactCon = styled.div`
- .contactForm{
-      max-width:500px;
-      margin: 0 auto;
-    }
+  .contactForm {
+    max-width: 500px;
+    margin: 0 auto;
+  }
   .ContactNav {
     margin: 20px auto;
     justify-content: center;
     text-align: center;
-   
+
     a {
       i {
         color: var(--darkerSaved);
@@ -41,11 +40,11 @@ const MadeWith = styled.p`
 export default () => {
   const [formMsg, setFormMsg] = useState("")
   const [checkbox, setCheckbox] = useState(false)
-  const emailInput = useRef()
-  const nameInput = useRef()
-  const phoneInput = useRef()
-  const messageInput = useRef()
-  
+  const emailInput = useRef<HTMLInputElement>(null)
+  const nameInput = useRef<HTMLInputElement>(null)
+  const phoneInput = useRef<HTMLInputElement>(null)
+  const messageInput = useRef<HTMLInputElement>(null)
+
   return (
     <Layout>
       <SEO title="Contact" />
@@ -108,8 +107,8 @@ export default () => {
                 </Form.Field>
                 <p>
                   I'll never share your information with anyone else. it saves
-                  in Airtable securly and send you a SMS and Email via Twilio and
-                  SendGrid API.
+                  in Airtable securly and send you a SMS and Email via Twilio
+                  and SendGrid API.
                 </p>
                 <Button type="submit">Submit</Button>
               </>
@@ -126,29 +125,32 @@ export default () => {
       </ContactCon>
     </Layout>
   )
-  function handleForm(e, value) {
+  function handleForm(e: { preventDefault: () => void }, _value: any) {
     e.preventDefault()
     const input = {
-      name: nameInput.current.value,
-      email: emailInput.current.value,
-      phone: phoneInput.current.value,
-      message: messageInput.current.value,
+      name: null !== nameInput.current ? nameInput.current.value : "",
+      email: null !== emailInput.current ? emailInput.current.value : "",
+      phone: null !== phoneInput.current ? phoneInput.current.value : "",
+      message: null !== messageInput.current ? messageInput.current.value : "",
       checkbox: checkbox,
     }
 
     sendForm(input)
   }
-  function sendForm(input) {
-    console.log(input)
+  function sendForm(input: {
+    name: string
+    email: any
+    phone: any
+    message: any
+    checkbox: boolean
+  }) {
     axios
       // .post("http://localhost:4000/submit", input)
       .post("https://secure-peak-92770.herokuapp.com/submit", input)
       .then(res => {
-        console.log(res)
         setFormMsg(res.data)
       })
-      .catch(err => {
-        console.log(err)
+      .catch(() => {
         setFormMsg("Connected Error")
       })
   }
