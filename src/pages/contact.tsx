@@ -47,7 +47,6 @@ export default () => {
   const nameInput = useRef()
   const phoneInput = useRef()
   const messageInput = useRef()
-  console.log(title);
   
   return (
     <Layout>
