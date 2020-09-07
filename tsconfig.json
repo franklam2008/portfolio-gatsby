@@ -18,7 +18,5 @@
     "removeComments": false,
     "preserveConstEnums": true
   },
-  "files": [
-    "src/custom.d.ts"
-  ],
+ 
 }

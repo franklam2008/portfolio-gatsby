@@ -14,6 +14,7 @@ import Img from "gatsby-image"
 import wave from "../images/wave/topWave.svg"
 import resume from "../images/Frank_Lam.pdf"
 import { projectsCon } from "./contents/content"
+
 const ProjectsCon = styled.div`
   .gatsby-image-wrapper {
     width: 35px;

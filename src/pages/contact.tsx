@@ -1,7 +1,6 @@
 import React, { useState, useRef } from "react"
 import axios from "axios"
 
-import { useSiteMetadata } from "../hooks/use-site-metadata"
 
 import Layout from "../components/layout"
 import ContactNav from "../components/contactNav"
@@ -40,7 +39,6 @@ const MadeWith = styled.p`
   }
 `
 export default () => {
-  const { title } = useSiteMetadata()
   const [formMsg, setFormMsg] = useState("")
   const [checkbox, setCheckbox] = useState(false)
   const emailInput = useRef()
