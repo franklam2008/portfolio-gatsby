@@ -22,6 +22,7 @@ const ProjectsCon = styled.div`
   }
 `
 export default function projects({ data }) {
+  console.log(data)
   return (
     <Layout>
       <SEO title="Projects" />
