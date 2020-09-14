@@ -14,7 +14,6 @@ import Img from "gatsby-image"
 import wave from "../images/wave/topWave.svg"
 import resume from "../images/Frank_Lam.pdf"
 import { projectsCon } from "./contents/content"
-
 const ProjectsCon = styled.div`
   .gatsby-image-wrapper {
     width: 35px;
@@ -22,7 +21,6 @@ const ProjectsCon = styled.div`
   }
 `
 export default function projects({ data }) {
-  console.log(data)
   return (
     <Layout>
       <SEO title="Projects" />

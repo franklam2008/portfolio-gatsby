@@ -28,7 +28,7 @@ export const skillsOthersCon = [
 export const projectsCon = [
   {
     title: "Huntington Bank BAO",
-    meta: "Angular, Ngrx, RxJS, TypeScript",
+    meta: "Angular, Ngrx, RxJS",
     text: `Worked on Angular project for Huntington bank BAO flow. Utilized Ngrx and RxJS for app state management. Unfortunately, I cannot showcase code here for obvious reason.`,
     imgName: "hnb.png",
   },
@@ -54,7 +54,7 @@ export const projectsCon = [
   },
   {
     title: "this.Portfolio",
-    meta: "React, TypeScript, Gatsby, Semantic UI",
+    meta: "React, Gatsby, Semantic UI",
     text: `React built portfolio with Gatsby JS and Semantic UI design. It is deployed in a cPanel hosting server, FastComet.`,
     imgName: "gatsby.png",
     btnName: "GitHub",
