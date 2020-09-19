@@ -50,10 +50,11 @@ export default function skills({ data }) {
             <Grid className="skills">
               {[
                 { name: "React", imgName: "react.png" },
-                { name: "Gatsby", imgName: "gatsby.png" },
+                { name: "TypeScript", imgName: "typescript.png" },
                 { name: "Angular2", imgName: "angular.png" },
                 { name: "Ngrx", imgName: "ngrx.png" },
                 { name: "RxJS", imgName: "rxjs.png" },
+                { name: "Gatsby", imgName: "gatsby.png" },
                 { name: "JS ES6", imgName: "javaS.png" },
                 { name: "SCSS", imgName: "scss.png" },
                 { name: "Bootstrap 5", imgName: "bootstrap.png" },
@@ -61,7 +62,6 @@ export default function skills({ data }) {
                 { name: "HTML 5", imgName: "html.png" },
                 { name: "Jquery", imgName: "jquery.png" },
                 { name: "WordPress", imgName: "wordPress.png" },
-             
               ].map(skill => {
                 const skillObj = data.allFile.edges.filter(
                   ({ node: skillNode }) =>
@@ -78,7 +78,7 @@ export default function skills({ data }) {
                     key={skill.name}
                   >
                     <Skill>
-                      <Img fluid={imgSrc} alt={skill.title} />
+                      <Img fluid={imgSrc} alt={skill.name} />
                     </Skill>
                     <SkillName>{skill.name}</SkillName>
                   </Grid.Column>
@@ -96,8 +96,38 @@ export default function skills({ data }) {
                 { name: "Node JS", imgName: "node.png" },
                 { name: "Graphql", imgName: "graphql.png" },
                 { name: "Firebase", imgName: "firebase.png" },
-                { name: "Contentful", imgName: "contentful.png" },
                 { name: "ExpressJS", imgName: "express.png" },
+              ].map(skill => {
+                const skillObj = data.allFile.edges.filter(
+                  ({ node: skillNode }) =>
+                    skillNode.childImageSharp.fluid.originalName ===
+                    skill.imgName
+                )
+                const imgSrc = skillObj[0].node.childImageSharp.fluid
+                return (
+                  <Grid.Column
+                    mobile={4}
+                    computer={3}
+                    largeScreen={2}
+                    widescreen={2}
+                    key={skill.name}
+                  >
+                    <Skill>
+                      <Img fluid={imgSrc} alt={skill.name} />
+                    </Skill>
+                    <SkillName>{skill.name}</SkillName>
+                  </Grid.Column>
+                )
+              })}
+            </Grid>
+          </Segment>
+          <Segment raised>
+            <Label as="a" color="yellow" ribbon>
+              Others
+            </Label>
+            <Grid className="skills">
+              {[
+                { name: "Contentful", imgName: "contentful.png" },
                 { name: "Git", imgName: "git.png" },
                 { name: "VS Code", imgName: "vs.png" },
               ].map(skill => {
@@ -116,7 +146,7 @@ export default function skills({ data }) {
                     key={skill.name}
                   >
                     <Skill>
-                      <Img fluid={imgSrc} alt={skill.title} />
+                      <Img fluid={imgSrc} alt={skill.name} />
                     </Skill>
                     <SkillName>{skill.name}</SkillName>
                   </Grid.Column>
