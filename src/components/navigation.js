@@ -17,6 +17,9 @@ const NavItemCon = styled.span`
       color: var(--textSaved);
     }
   }
+  button:focus {
+    outline: 0;
+  }
   button::after {
     content: "";
     display: block;
@@ -71,6 +74,6 @@ export default function navigation() {
   function navigationOnClick(directionString) {
     window.setTimeout(() => {
       navigate(directionString)
-    }, 1000)
+    }, 300)
   }
 }

@@ -48,7 +48,7 @@ export default () => {
       <SEO title="Contact" />
       <ContactCon className="page">
         <div className="contactTopCon topCon"></div>
-        <img className="TopWave" src={wave} alt="wave" />
+        <img className="TopWave animatedDown" src={wave} alt="wave" />
         <Container>
           <h2 className="pageTitle">Contact Me</h2>
           <Form className="contactForm" onSubmit={handleForm}>

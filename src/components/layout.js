@@ -1,6 +1,5 @@
-import React from "react"
+import React, { useState } from "react"
 import PropTypes from "prop-types"
-import { useStaticQuery, graphql } from "gatsby"
 //pages
 import Header from "./header"
 //css
@@ -11,37 +10,30 @@ const LayoutCon = styled.div`
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  /* background-color: blue; */
-
 `
 const Main = styled.div`
   flex: 1;
-  
 `
 const Footer = styled.div`
   text-align: right;
   opacity: 0.2;
 `
 const Layout = ({ children }) => {
-  const data = useStaticQuery(graphql`
-    query SiteTitleQuery {
-      site {
-        siteMetadata {
-          title
-        }
-      }
-    }
-  `)
+  const [animatedDown, setAnimatedDown] = useState(true)
 
   return (
     <LayoutCon>
-      <Header siteTitle={data.site.siteMetadata.title} />
+      <Header handleAnimatedDown={handleAnimatedDown} />
       <Main>{children}</Main>
       <Footer>
         © {new Date().getFullYear()} Frank Lam, Built with GatsbyJS
       </Footer>
     </LayoutCon>
   )
+
+  function handleAnimatedDown(boolean) {
+    setAnimatedDown(boolean)
+  }
 }
 
 Layout.propTypes = {

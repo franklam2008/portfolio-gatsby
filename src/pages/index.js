@@ -52,7 +52,7 @@ const BottomCon = styled.div`
   align-items: center;
   .TopWave {
     position: absolute;
-    top:0;
+    top: 0;
   }
 `
 const HomeParagraph = styled.p`
@@ -64,46 +64,53 @@ const HomeParagraph = styled.p`
     font-size: 1.1rem;
   }
 `
-const IndexPage = () => (
-  <Layout>
-    <SEO title="Home" />
 
-    <HomeCon className="page">
-      <TopCon>
-        <Container>
-          <Grid>
-            <Grid.Column md={6}>
-              <SubTitle>Hi, I'm Frank!</SubTitle>
-              <Title>I build amazing experiences</Title>
-              <SubTitle>Web Developer from Orlando, FL</SubTitle>
-              <ColorHeader className="colorHeader">
-                <strong>
-                  <Link to="/projects/">My Work</Link>
-                </strong>
-                <Icon name="angle right" />
-              </ColorHeader>
-            </Grid.Column>
-          </Grid>
-        </Container>
-      </TopCon>
-      <BottomCon>
-        <img className="TopWave animated" src={wave} alt="wave" />
+const IndexPage = () => {
+  return (
+    <Layout>
+      <SEO title="Home" />
+      <HomeCon className="page">
+        <TopCon>
+          <Container>
+            <Grid>
+              <Grid.Column md={6}>
+                <SubTitle>Hi, I'm Frank!</SubTitle>
+                <Title>I build amazing experiences</Title>
+                <SubTitle>Web Developer from Orlando, FL</SubTitle>
+                <ColorHeader className="colorHeader">
+                  <strong>
+                    <Link to="/projects/">My Work</Link>
+                  </strong>
+                  <Icon name="angle right" />
+                </ColorHeader>
+              </Grid.Column>
+            </Grid>
+          </Container>
+        </TopCon>
+        <BottomCon>
+          <img
+            id="animatedWave"
+            className="TopWave animatedDown"
+            src={wave}
+            alt="wave"
+          />
 
-        <Container>
-          <Grid>
-            <HomeParagraph>
-              Since the beginning days of my programming career,
-              I've been developing and building great products for businesses
-              &amp; clients. My favorite technologies right now are: React.js,
-              GraphQL, Node.js, and Firebase. I believe one of the main goals
-              for a good developer is building software for people. And I'm
-              totally in love with it all.
-            </HomeParagraph>
-          </Grid>
-        </Container>
-      </BottomCon>
-    </HomeCon>
-  </Layout>
-)
+          <Container>
+            <Grid>
+              <HomeParagraph>
+                Since the beginning days of my programming career, I've been
+                developing and building great products for businesses &amp;
+                clients. My favorite technologies right now are: React.js,
+                GraphQL, Node.js, and Firebase. I believe one of the main goals
+                for a good developer is building software for people. And I'm
+                totally in love with it all.
+              </HomeParagraph>
+            </Grid>
+          </Container>
+        </BottomCon>
+      </HomeCon>
+    </Layout>
+  )
+}
 
 export default IndexPage

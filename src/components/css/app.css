@@ -102,6 +102,9 @@ h2.pageTitle {
   width: 120%;
   -webkit-transform-origin: top;
           transform-origin: top;
+}
+
+.animatedDown {
   -webkit-animation: animateWave 3000ms cubic-bezier(0.23, 1, 0.32, 1) forwards;
           animation: animateWave 3000ms cubic-bezier(0.23, 1, 0.32, 1) forwards;
 }
@@ -131,6 +134,10 @@ h2.pageTitle {
 @media only screen and (min-width: 1100px) {
   .TopWave {
     margin-bottom: -10vw;
+  }
+  .animatedDown {
+    -webkit-animation: animateWave 3000ms cubic-bezier(0.23, 1, 0.32, 1) forwards;
+            animation: animateWave 3000ms cubic-bezier(0.23, 1, 0.32, 1) forwards;
   }
   @-webkit-keyframes animateWave {
     0% {

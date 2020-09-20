@@ -1,6 +1,5 @@
 import { Link } from "gatsby"
 import frankIcon from "../images/frank.png"
-import PropTypes from "prop-types"
 import React from "react"
 import styled from "styled-components"
 import Navigation from "./navigation"
@@ -57,7 +56,7 @@ const BottomNavbarCSS = styled.nav`
         font-size: 18px;
       }
     }
-    
+
     a.active {
       color: var(--mainColorSaved) !important;
     }
@@ -76,7 +75,7 @@ const MainIcon = styled.img`
   filter: brightness(0) invert(1);
   max-width: 80px;
 `
-const Header = ({ siteTitle }) => (
+const Header = () => (
   <header>
     <TopNavbarCSS>
       {/* Left Nav */}
@@ -94,13 +93,5 @@ const Header = ({ siteTitle }) => (
     </BottomNavbarCSS>
   </header>
 )
-
-Header.propTypes = {
-  siteTitle: PropTypes.string,
-}
-
-Header.defaultProps = {
-  siteTitle: ``,
-}
 
 export default Header

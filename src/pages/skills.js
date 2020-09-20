@@ -38,7 +38,7 @@ export default function skills({ data }) {
       <SEO title="Skills" />
       <div className="skillCon page">
         <div className="skillTopCon topCon"></div>
-        <img className="TopWave" src={wave} alt="wave" />
+        <img className="TopWave animatedDown" src={wave} alt="wave" />
 
         <Container className="skillSetCon">
           <h2 className="pageTitle">Specialized Skill Set</h2>
