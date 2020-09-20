@@ -42,8 +42,8 @@ export default function projects({ data }) {
             {[
               {
                 title: "Huntington Bank BAO",
-                meta: "Angular, Ngrx, RxJS",
-                text: `Worked on Angular project for Huntington bank BAO flow. Utilized Ngrx and RxJS for app state management. Unfortunately, I cannot showcase code here for obvious reason.`,
+                meta: "Angular, TypeScript, Ngrx, RxJS",
+                text: `Worked on Angular project for Huntington bank Business Account Opening flow. Utilized TypeScript, Ngrx and RxJS for app state management. Unfortunately, I cannot showcase code here for banking security reason.`,
                 imgName: "hnb.png",
               },
               {
