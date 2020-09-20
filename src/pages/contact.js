@@ -1,8 +1,5 @@
 import React, { useState, useRef } from "react"
 import axios from "axios"
-
-import { useSiteMetadata } from "../hooks/use-site-metadata"
-
 import Layout from "../components/layout"
 import ContactNav from "../components/contactNav"
 import SEO from "../components/seo"
@@ -10,15 +7,15 @@ import wave from "../images/wave/topWave.svg"
 import styled from "styled-components"
 import { Container, Checkbox, Form, Button, Icon } from "semantic-ui-react"
 const ContactCon = styled.div`
- .contactForm{
-      max-width:500px;
-      margin: 0 auto;
-    }
+  .contactForm {
+    max-width: 500px;
+    margin: 0 auto;
+  }
   .ContactNav {
     margin: 20px auto;
     justify-content: center;
     text-align: center;
-   
+
     a {
       i {
         color: var(--darkerSaved);
@@ -40,15 +37,12 @@ const MadeWith = styled.p`
   }
 `
 export default () => {
-  const { title } = useSiteMetadata()
   const [formMsg, setFormMsg] = useState("")
   const [checkbox, setCheckbox] = useState(false)
   const emailInput = useRef()
   const nameInput = useRef()
   const phoneInput = useRef()
   const messageInput = useRef()
-  console.log(title);
-  
   return (
     <Layout>
       <SEO title="Contact" />
@@ -111,8 +105,8 @@ export default () => {
                 </Form.Field>
                 <p>
                   I'll never share your information with anyone else. it saves
-                  in Airtable securly and send you a SMS and Email via Twilio and
-                  SendGrid API.
+                  in Airtable securly and send you a SMS and Email via Twilio
+                  and SendGrid API.
                 </p>
                 <Button type="submit">Submit</Button>
               </>
@@ -142,16 +136,12 @@ export default () => {
     sendForm(input)
   }
   function sendForm(input) {
-    console.log(input)
     axios
-      // .post("http://localhost:4000/submit", input)
       .post("https://secure-peak-92770.herokuapp.com/submit", input)
       .then(res => {
-        console.log(res)
         setFormMsg(res.data)
       })
       .catch(err => {
-        console.log(err)
         setFormMsg("Connected Error")
       })
   }

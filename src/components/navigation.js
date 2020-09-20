@@ -1,10 +1,14 @@
 import React from "react"
-import { Link } from "gatsby"
+import { navigate } from "gatsby"
 import styled from "styled-components"
 import { Icon } from "semantic-ui-react"
+
 const NavItemCon = styled.span`
-  a {
+  button {
     color: var(--textSaved);
+    background: transparent;
+    border: none;
+    cursor: pointer;
     display: inline-block;
     transition: 0.2s ease-out;
     text-decoration: none;
@@ -13,7 +17,7 @@ const NavItemCon = styled.span`
       color: var(--textSaved);
     }
   }
-  a::after {
+  button::after {
     content: "";
     display: block;
     width: 0;
@@ -25,7 +29,7 @@ const NavItemCon = styled.span`
     );
     transition: width 0.3s;
   }
-  a:hover::after {
+  button:hover::after {
     width: 100%;
     transition: width 0.3s;
   }
@@ -33,30 +37,40 @@ const NavItemCon = styled.span`
     display: none;
   }
 `
-export default function navItems() {
+export default function navigation() {
   return (
     <NavItemCon className="navItemCon">
-      <Link className="navItem" to="/">
+      <button className="navItem" onClick={() => navigationOnClick("/")}>
         {" "}
         <Icon name="home" />
-        <span>Home</span>
-      </Link>
-
-      <Link className="navItem" to="/projects/">
+        <div>Home</div>
+      </button>
+      <button
+        className="navItem"
+        onClick={() => navigationOnClick("/projects/")}
+      >
         {" "}
         <Icon name="suitcase" />
-        <span>My Work</span>
-      </Link>
-      <Link className="navItem" to="/skills/">
+        <div>My Work</div>
+      </button>
+      <button className="navItem" onClick={() => navigationOnClick("/skills/")}>
         {" "}
         <Icon name="wrench" />
-        <span>Skill Set</span>
-      </Link>
-      <Link className="navItem" to="/contact/">
+        <div>Skill Set</div>
+      </button>
+      <button
+        className="navItem"
+        onClick={() => navigationOnClick("/contact/")}
+      >
         {" "}
         <Icon name="mail outline" />
-        <span>Contact</span>
-      </Link>
+        <div>Contact</div>
+      </button>
     </NavItemCon>
   )
+  function navigationOnClick(directionString) {
+    window.setTimeout(() => {
+      navigate(directionString)
+    }, 1000)
+  }
 }

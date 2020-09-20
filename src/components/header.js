@@ -3,7 +3,7 @@ import frankIcon from "../images/frank.png"
 import PropTypes from "prop-types"
 import React from "react"
 import styled from "styled-components"
-import NavItems from "./navItems"
+import Navigation from "./navigation"
 import ContactNav from "./contactNav"
 const TopNavbarCSS = styled.nav`
   background-color: var(--darkerSaved);
@@ -57,9 +57,7 @@ const BottomNavbarCSS = styled.nav`
         font-size: 18px;
       }
     }
-    a {
-      text-decoration: none;
-    }
+    
     a.active {
       color: var(--mainColorSaved) !important;
     }
@@ -81,16 +79,18 @@ const MainIcon = styled.img`
 const Header = ({ siteTitle }) => (
   <header>
     <TopNavbarCSS>
+      {/* Left Nav */}
       <div className="topNavLeft">
         <Link to="/">
           <MainIcon src={frankIcon} alt="main Icon" />
         </Link>
-        <NavItems />
+        <Navigation />
       </div>
+      {/* Right Nav */}
       <ContactNav />
     </TopNavbarCSS>
     <BottomNavbarCSS>
-      <NavItems />
+      <Navigation />
     </BottomNavbarCSS>
   </header>
 )

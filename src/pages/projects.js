@@ -32,7 +32,7 @@ export default function projects({ data }) {
             Projects <br />{" "}
             <small className="colorHeader">
               <strong>
-                <a href={resume} target="_blank">
+                <a href={resume} target="_blank" rel="noreferrer">
                   resume
                 </a>
               </strong>
