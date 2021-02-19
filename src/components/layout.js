@@ -1,8 +1,8 @@
 import React, { useState } from "react"
 import PropTypes from "prop-types"
-//pages
+// pages
 import Header from "./header"
-//css
+// css
 import styled from "styled-components"
 import "./css/layout.css"
 import "./css/app.css"
