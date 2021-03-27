@@ -63,14 +63,6 @@ h2.pageTitle {
   transition: width 0.3s;
 }
 
-.colorHeader span {
-  font-size: 0.8rem;
-}
-
-.colorHeader i {
-  color: var(--specialColorSaved);
-}
-
 /* simple - enter transition 300ms, exit 150ms */
 .fade-appear,
 .fade-enter {

@@ -1,9 +1,10 @@
 import React from "react"
 import { Link } from "gatsby"
 import styled from "styled-components"
-import { Container, Grid, Icon } from "semantic-ui-react"
+import { Container, Grid } from "semantic-ui-react"
 import wave from "../images/wave/topWave.svg"
 import Layout from "../components/layout"
+import ArrowSvg from "../components/arrowSvg"
 import SEO from "../components/seo"
 import "semantic-ui-css/semantic.min.css"
 
@@ -43,6 +44,11 @@ const ColorHeader = styled.h2`
     margin-top: 10px;
   }
 `
+const MyWorkCon = styled.div`
+  margin: 20px 0;
+  display: flex;
+  flex-direction: row;
+`
 
 const BottomCon = styled.div`
   position: relative;
@@ -76,13 +82,17 @@ const IndexPage = () => {
               <Grid.Column md={6}>
                 <SubTitle>Hi, I'm Frank!</SubTitle>
                 <Title>I build amazing experiences</Title>
-                <SubTitle>Web Developer from Orlando, FL</SubTitle>
-                <ColorHeader className="colorHeader">
-                  <strong>
-                    <Link to="/projects/">My Work</Link>
-                  </strong>
-                  <Icon name="angle right" />
-                </ColorHeader>
+                <SubTitle>Web Developer from Pittsburgh, PA</SubTitle>
+                <MyWorkCon>
+                  <ColorHeader className="colorHeader">
+                    <strong>
+                      <Link to="/projects/">My Work</Link>
+                    </strong>
+                  </ColorHeader>
+                  <Link to="/projects/">
+                    <ArrowSvg to="/projects/" />
+                  </Link>
+                </MyWorkCon>
               </Grid.Column>
             </Grid>
           </Container>
@@ -94,7 +104,6 @@ const IndexPage = () => {
             src={wave}
             alt="wave"
           />
-
           <Container>
             <Grid>
               <HomeParagraph>

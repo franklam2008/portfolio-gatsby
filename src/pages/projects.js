@@ -41,10 +41,22 @@ export default function projects({ data }) {
           <Card.Group centered>
             {[
               {
+                title: "Carnegie Learning",
+                meta: "Angular, TypeScript, Ngrx, RxJS",
+                text: `Collaborated with a multidisciplinary group of educational professionals to develop and deploy educational software used across the U.S. within the K-12 curriculum. Improved structural layout and added strict-typing to existing Angular codebase.`,
+                imgName: "cl.png",
+                btnName: "GitHub",
+                btnHref: "https://github.com/CarnegieLearningWeb/passport-frontend-v2",
+                btn2Name: "Live Site",
+                btn2Href: "https://passport.qa-cli.com/#/login/form",
+              },
+              {
                 title: "Huntington Bank BAO",
                 meta: "Angular, TypeScript, Ngrx, RxJS",
                 text: `Worked on Angular project for Huntington bank Business Account Opening flow. Utilized TypeScript, Ngrx and RxJS for app state management. Unfortunately, I cannot showcase code here for banking security reason.`,
                 imgName: "hnb.png",
+                btn2Name: "Live Site",
+                btn2Href: "https://apply.huntington.com/new/business/welcome?product=PT",
               },
               {
                 title: "Professional Banking Dashboard",
