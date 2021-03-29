@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React from "react"
 import PropTypes from "prop-types"
 // pages
 import Header from "./header"
@@ -6,6 +6,7 @@ import Header from "./header"
 import styled from "styled-components"
 import "./css/layout.css"
 import "./css/app.css"
+
 const LayoutCon = styled.div`
   display: flex;
   flex-direction: column;
@@ -19,21 +20,15 @@ const Footer = styled.div`
   opacity: 0.2;
 `
 const Layout = ({ children }) => {
-  const [animatedDown, setAnimatedDown] = useState(true)
-
   return (
     <LayoutCon>
-      <Header handleAnimatedDown={handleAnimatedDown} />
+      <Header />
       <Main>{children}</Main>
       <Footer>
         © {new Date().getFullYear()} Frank Lam, Built with GatsbyJS
       </Footer>
     </LayoutCon>
   )
-
-  function handleAnimatedDown(boolean) {
-    setAnimatedDown(boolean)
-  }
 }
 
 Layout.propTypes = {
