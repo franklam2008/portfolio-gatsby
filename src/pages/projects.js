@@ -3,7 +3,6 @@ import styled from "styled-components"
 import {
   Button,
   Card,
-  //  Image,
   Container,
   Icon,
 } from "semantic-ui-react"
@@ -11,7 +10,7 @@ import { graphql } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Img from "gatsby-image"
-import wave from "../images/wave/topWave.svg"
+import WaveSvg from "../components/svgs/waveSvg"
 import wt from "../images/wtFrontPage.png"
 import resume from "../images/Frank_Lam.pdf"
 const ProjectsCon = styled.div`
@@ -26,7 +25,7 @@ export default function projects({ data }) {
       <SEO title="Projects" />
       <ProjectsCon className=" page">
         <div className="projectsTopCon topCon"></div>
-        <img className="TopWave animatedDown" src={wave} alt="wave" />
+        <WaveSvg />
         <Container fluid>
           <h2 className="pageTitle">
             Projects <br />{" "}
@@ -46,7 +45,8 @@ export default function projects({ data }) {
                 text: `Collaborated with a multidisciplinary group of educational professionals to develop and deploy educational software used across the U.S. within the K-12 curriculum. Improved structural layout and added strict-typing to existing Angular codebase.`,
                 imgName: "cl.png",
                 btnName: "GitHub",
-                btnHref: "https://github.com/CarnegieLearningWeb/passport-frontend-v2",
+                btnHref:
+                  "https://github.com/CarnegieLearningWeb/passport-frontend-v2",
                 btn2Name: "Live Site",
                 btn2Href: "https://passport.qa-cli.com/#/login/form",
               },
@@ -56,7 +56,16 @@ export default function projects({ data }) {
                 text: `Worked on Angular project for Huntington bank Business Account Opening flow. Utilized TypeScript, Ngrx and RxJS for app state management. Unfortunately, I cannot showcase code here for banking security reason.`,
                 imgName: "hnb.png",
                 btn2Name: "Live Site",
-                btn2Href: "https://apply.huntington.com/new/business/welcome?product=PT",
+                btn2Href:
+                  "https://apply.huntington.com/new/business/welcome?product=PT",
+              },
+              {
+                title: "this.Portfolio",
+                meta: "React, Gatsby, Semantic UI",
+                text: `React built portfolio with Gatsby JS and Semantic UI design. It is deployed in a cPanel hosting server, FastComet.`,
+                imgName: "gatsby.png",
+                btnName: "GitHub",
+                btnHref: "https://github.com/franklam2008/Portfolio",
               },
               {
                 title: "Professional Banking Dashboard",
@@ -78,14 +87,7 @@ export default function projects({ data }) {
                 btn2Name: "Live Site",
                 btn2Href: "https://franklam.app/",
               },
-              {
-                title: "this.Portfolio",
-                meta: "React, Gatsby, Semantic UI",
-                text: `React built portfolio with Gatsby JS and Semantic UI design. It is deployed in a cPanel hosting server, FastComet.`,
-                imgName: "gatsby.png",
-                btnName: "GitHub",
-                btnHref: "https://github.com/franklam2008/Portfolio",
-              },
+
               {
                 title: "React E-commerce",
                 meta: "React, Gatsby, Contentful",

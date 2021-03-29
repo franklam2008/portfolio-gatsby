@@ -1,8 +1,8 @@
 import React from "react"
-import { navigate } from "gatsby"
 import styled from "styled-components"
 import { Icon } from "semantic-ui-react"
-
+import { navigationOnClick } from "../components/helper/helper"
+import { GlobalDispatchContext } from "../context/GlobalContextProvider"
 const NavItemCon = styled.span`
   button {
     color: var(--textSaved);
@@ -40,30 +40,37 @@ const NavItemCon = styled.span`
     display: none;
   }
 `
-export default function navigation() {
+const Navigation = () => {
+  const dispatch = React.useContext(GlobalDispatchContext)
   return (
     <NavItemCon className="navItemCon">
-      <button className="navItem" onClick={() => navigationOnClick("/")}>
+      <button
+        className="navItem"
+        onClick={() => navigationOnClick("/", dispatch)}
+      >
         {" "}
         <Icon name="home" />
         <div>Home</div>
       </button>
       <button
         className="navItem"
-        onClick={() => navigationOnClick("/projects/")}
+        onClick={() => navigationOnClick("/projects/", dispatch)}
       >
         {" "}
         <Icon name="suitcase" />
         <div>My Work</div>
       </button>
-      <button className="navItem" onClick={() => navigationOnClick("/skills/")}>
+      <button
+        className="navItem"
+        onClick={() => navigationOnClick("/skills/", dispatch)}
+      >
         {" "}
         <Icon name="wrench" />
         <div>Skill Set</div>
       </button>
       <button
         className="navItem"
-        onClick={() => navigationOnClick("/contact/")}
+        onClick={() => navigationOnClick("/contact/", dispatch)}
       >
         {" "}
         <Icon name="mail outline" />
@@ -71,9 +78,5 @@ export default function navigation() {
       </button>
     </NavItemCon>
   )
-  function navigationOnClick(directionString) {
-    window.setTimeout(() => {
-      navigate(directionString)
-    }, 300)
-  }
 }
+export default Navigation

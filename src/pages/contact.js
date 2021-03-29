@@ -3,9 +3,9 @@ import axios from "axios"
 import Layout from "../components/layout"
 import ContactNav from "../components/contactNav"
 import SEO from "../components/seo"
-import wave from "../images/wave/topWave.svg"
 import styled from "styled-components"
 import { Container, Checkbox, Form, Button, Icon } from "semantic-ui-react"
+import WaveSvg from "../components/svgs/waveSvg"
 const ContactCon = styled.div`
   .contactForm {
     max-width: 500px;
@@ -48,7 +48,7 @@ export default () => {
       <SEO title="Contact" />
       <ContactCon className="page">
         <div className="contactTopCon topCon"></div>
-        <img className="TopWave animatedDown" src={wave} alt="wave" />
+        <WaveSvg />
         <Container>
           <h2 className="pageTitle">Contact Me</h2>
           <Form className="contactForm" onSubmit={handleForm}>

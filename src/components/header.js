@@ -1,9 +1,10 @@
-import { Link } from "gatsby"
 import frankIcon from "../images/frank.png"
 import React from "react"
 import styled from "styled-components"
 import Navigation from "./navigation"
 import ContactNav from "./contactNav"
+import { navigationOnClick } from "../components/helper/helper"
+import { GlobalDispatchContext } from "../context/GlobalContextProvider"
 const TopNavbarCSS = styled.nav`
   background-color: var(--darkerSaved);
   position: relative;
@@ -73,25 +74,29 @@ const BottomNavbarCSS = styled.nav`
 `
 const MainIcon = styled.img`
   filter: brightness(0) invert(1);
+  cursor: pointer;
   max-width: 80px;
 `
-const Header = () => (
-  <header>
-    <TopNavbarCSS>
-      {/* Left Nav */}
-      <div className="topNavLeft">
-        <Link to="/">
-          <MainIcon src={frankIcon} alt="main Icon" />
-        </Link>
+const Header = () => {
+  const dispatch = React.useContext(GlobalDispatchContext)
+  return (
+    <header>
+      <TopNavbarCSS>
+        {/* Left Nav */}
+        <div className="topNavLeft">
+          <div onClick={() => navigationOnClick("/", dispatch)}>
+            <MainIcon src={frankIcon} alt="main Icon" />
+          </div>
+          <Navigation />
+        </div>
+        {/* Right Nav */}
+        <ContactNav />
+      </TopNavbarCSS>
+      <BottomNavbarCSS>
         <Navigation />
-      </div>
-      {/* Right Nav */}
-      <ContactNav />
-    </TopNavbarCSS>
-    <BottomNavbarCSS>
-      <Navigation />
-    </BottomNavbarCSS>
-  </header>
-)
+      </BottomNavbarCSS>
+    </header>
+  )
+}
 
 export default Header
