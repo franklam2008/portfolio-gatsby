@@ -1,11 +1,14 @@
 import React from "react"
-import { Link } from "gatsby"
 import styled from "styled-components"
 import { Container, Grid } from "semantic-ui-react"
-import wave from "../images/wave/topWave.svg"
+
+// components
+import WaveSvg from "../components/svgs/waveSvg"
 import Layout from "../components/layout"
-import ArrowSvg from "../components/arrowSvg"
+import ArrowSvg from "../components/svgs/arrowSvg"
 import SEO from "../components/seo"
+import { navigationOnClick } from "../components/helper/helper"
+import { GlobalDispatchContext } from "../context/GlobalContextProvider"
 import "semantic-ui-css/semantic.min.css"
 
 const HomeCon = styled.div`
@@ -72,6 +75,7 @@ const HomeParagraph = styled.p`
 `
 
 const IndexPage = () => {
+  const dispatch = React.useContext(GlobalDispatchContext)
   return (
     <Layout>
       <SEO title="Home" />
@@ -86,28 +90,31 @@ const IndexPage = () => {
                 <MyWorkCon>
                   <ColorHeader className="colorHeader">
                     <strong>
-                      <Link to="/projects/">My Work</Link>
+                      <div
+                        onClick={() =>
+                          navigationOnClick("/projects/", dispatch)
+                        }
+                      >
+                        My Work
+                      </div>
                     </strong>
                   </ColorHeader>
-                  <Link to="/projects/">
-                    <ArrowSvg to="/projects/" />
-                  </Link>
+                  <div
+                    onClick={() => navigationOnClick("/projects/", dispatch)}
+                  >
+                    <ArrowSvg />
+                  </div>
                 </MyWorkCon>
               </Grid.Column>
             </Grid>
           </Container>
         </TopCon>
         <BottomCon>
-          <img
-            id="animatedWave"
-            className="TopWave animatedDown"
-            src={wave}
-            alt="wave"
-          />
+          <WaveSvg />
           <Container>
             <Grid>
               <HomeParagraph>
-                Since the beginning days of my programming career, I've been
+                Since the beginning gdays of my programming career, I've been
                 developing and building great products for businesses &amp;
                 clients. My favorite technologies right now are: React.js,
                 GraphQL, Node.js, and Firebase. I believe one of the main goals
