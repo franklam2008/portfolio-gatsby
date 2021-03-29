@@ -117,7 +117,7 @@ export default () => {
           </Form>
           <ContactNav />
           <MadeWith>
-            Made with <Icon name="heart" /> in Orlando, Florida
+            Made with <Icon name="heart" /> in Pittsburgh, Pennsylvania
           </MadeWith>
         </Container>
       </ContactCon>

@@ -11,14 +11,14 @@ const WaveSvgCss = styled.div`
     transform-origin: top;
   }
   .animatedDown {
-    animation: animateWaveDown 3000ms cubic-bezier(0.23, 1, 0.32, 1) forwards;
+    animation: animateWaveDown 2000ms cubic-bezier(0.23, 1, 0.32, 1) forwards;
   }
   .animatedUp {
-    animation: animateWaveUp 3000ms cubic-bezier(0.23, 1, 0.32, 1) forwards;
+    animation: animateWaveUp 2000ms cubic-bezier(0.23, 1, 0.32, 1) forwards;
   }
   @keyframes animateWaveDown {
     0% {
-      transform: scale(1, 0);
+      transform: scale(1, 0.2);
     }
     100% {
       transform: scale(1, 1);
@@ -29,7 +29,7 @@ const WaveSvgCss = styled.div`
       transform: scale(1, 1);
     }
     100% {
-      transform: scale(1, 0);
+      transform: scale(1, 0.2);
     }
   }
   @media only screen and (min-width: 1100px) {
@@ -37,14 +37,14 @@ const WaveSvgCss = styled.div`
       margin-bottom: -10vw;
     }
     .animatedDown {
-      animation: animateWaveDown 3000ms cubic-bezier(0.23, 1, 0.32, 1) forwards;
+      animation: animateWaveDown 2000ms cubic-bezier(0.23, 1, 0.32, 1) forwards;
     }
     .animatedUp {
-      animation: animateWaveUp 3000ms cubic-bezier(0.23, 1, 0.32, 1) forwards;
+      animation: animateWaveUp 2000ms cubic-bezier(0.23, 1, 0.32, 1) forwards;
     }
     @keyframes animateWaveDown {
       0% {
-        transform: scale(1, 0);
+        transform: scale(1, 0.2);
       }
       100% {
         transform: scale(1, 0.5);
@@ -55,7 +55,7 @@ const WaveSvgCss = styled.div`
         transform: scale(1, 0.5);
       }
       100% {
-        transform: scale(1, 0);
+        transform: scale(1, 0.2);
       }
     }
   }

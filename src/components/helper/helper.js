@@ -5,5 +5,5 @@ export function navigationOnClick(directionString, dispatch) {
   window.setTimeout(() => {
     dispatch({ type: "PAGE_CHANGED" })
     navigate(directionString)
-  }, 600)
+  }, 400)
 }
