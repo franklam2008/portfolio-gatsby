@@ -5,7 +5,7 @@ import { graphql } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import { Segment, Container, Label, Grid } from "semantic-ui-react"
-import wave from "../images/wave/topWave.svg"
+import WaveSvg from "../components/svgs/waveSvg"
 const Skill = styled.div`
   margin: 10px auto;
   overflow: hidden;
@@ -38,7 +38,7 @@ export default function skills({ data }) {
       <SEO title="Skills" />
       <div className="skillCon page">
         <div className="skillTopCon topCon"></div>
-        <img className="TopWave animatedDown" src={wave} alt="wave" />
+        <WaveSvg />
 
         <Container className="skillSetCon">
           <h2 className="pageTitle">Specialized Skill Set</h2>
