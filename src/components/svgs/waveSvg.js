@@ -1,92 +1,10 @@
 import React from "react"
-import styled from "styled-components"
 import { GlobalStateContext } from "../../context/GlobalContextProvider"
-const WaveSvgCss = styled.div`
-  .TopWave {
-    margin-left: -20px;
-    margin-top: -10px;
-    margin-bottom: -5vw;
-    max-width: 120%;
-    width: 120%;
-    transform-origin: top;
-  }
-  .animatedDown {
-    animation: animateWaveDown 2000ms cubic-bezier(0.23, 1, 0.32, 1) forwards;
-  }
-  .animatedUp {
-    animation: animateWaveUp 2000ms cubic-bezier(0.23, 1, 0.32, 1) forwards;
-  }
-  @keyframes animateWaveDown {
-    0% {
-      transform: scale(1, 0.2);
-    }
-    100% {
-      transform: scale(1, 1);
-    }
-  }
-  @keyframes animateWaveUp {
-    0% {
-      transform: scale(1, 1);
-    }
-    100% {
-      transform: scale(1, 0.2);
-    }
-  }
-  @media only screen and (min-width: 1100px) {
-    .TopWave {
-      margin-bottom: -10vw;
-    }
-    .animatedDown {
-      animation: animateWaveDown 2000ms cubic-bezier(0.23, 1, 0.32, 1) forwards;
-    }
-    .animatedUp {
-      animation: animateWaveUp 2000ms cubic-bezier(0.23, 1, 0.32, 1) forwards;
-    }
-    @keyframes animateWaveDown {
-      0% {
-        transform: scale(1, 0.2);
-      }
-      100% {
-        transform: scale(1, 0.5);
-      }
-    }
-    @keyframes animateWaveUp {
-      0% {
-        transform: scale(1, 0.5);
-      }
-      100% {
-        transform: scale(1, 0.2);
-      }
-    }
-  }
-
-  @media only screen and (max-width: 768px) {
-    .TopWave {
-      margin-bottom: -5vw;
-    }
-    @keyframes animateWaveDown {
-      0% {
-        transform: scale(1, .4);
-      }
-      100% {
-        transform: scale(1, 1);
-      }
-    }
-    @keyframes animateWaveUp {
-      0% {
-        transform: scale(1, 1);
-      }
-      100% {
-        transform: scale(1, 0.4);
-      }
-    }
-  }
-`
+import './css/waveSvg.css';
 
 const WaveSvg = () => {
   const state = React.useContext(GlobalStateContext)
   return (
-    <WaveSvgCss>
       <div
         className={
           state.pageChanging ? "TopWave animatedUp" : "TopWave animatedDown"
@@ -104,7 +22,6 @@ const WaveSvg = () => {
           ></path>
         </svg>
       </div>
-    </WaveSvgCss>
   )
 }
 

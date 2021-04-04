@@ -131,7 +131,7 @@ export default function projects({ data }) {
               return (
                 <Card key={project.title}>
                   <Card.Content>
-                    <Img fluid={imgSrc} alt={project.title} />
+                    <Img draggable="false"fluid={imgSrc} alt={project.title} />
                     <Card.Header>{project.title}</Card.Header>
                     <Card.Meta>{project.meta}</Card.Meta>
                     <Card.Description>{project.text}</Card.Description>

@@ -84,7 +84,7 @@ const Header = () => {
         {/* Left Nav */}
         <div className="topNavLeft">
           <div onClick={() => navigationOnClick("/", dispatch)}>
-            <MainIcon src={frankIcon} alt="main Icon" />
+            <MainIcon draggable="false" src={frankIcon} alt="main Icon" />
           </div>
           <Navigation />
         </div>

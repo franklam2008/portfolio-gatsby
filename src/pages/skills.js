@@ -78,7 +78,7 @@ export default function skills({ data }) {
                     key={skill.name}
                   >
                     <Skill>
-                      <Img fluid={imgSrc} alt={skill.name} />
+                      <Img draggable="false" fluid={imgSrc} alt={skill.name} />
                     </Skill>
                     <SkillName>{skill.name}</SkillName>
                   </Grid.Column>
@@ -113,7 +113,7 @@ export default function skills({ data }) {
                     key={skill.name}
                   >
                     <Skill>
-                      <Img fluid={imgSrc} alt={skill.name} />
+                      <Img draggable="false" fluid={imgSrc} alt={skill.name} />
                     </Skill>
                     <SkillName>{skill.name}</SkillName>
                   </Grid.Column>
@@ -146,7 +146,7 @@ export default function skills({ data }) {
                     key={skill.name}
                   >
                     <Skill>
-                      <Img fluid={imgSrc} alt={skill.name} />
+                      <Img draggable="false" fluid={imgSrc} alt={skill.name} />
                     </Skill>
                     <SkillName>{skill.name}</SkillName>
                   </Grid.Column>
