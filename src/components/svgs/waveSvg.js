@@ -63,7 +63,22 @@ const WaveSvgCss = styled.div`
   @media only screen and (max-width: 768px) {
     .TopWave {
       margin-bottom: -5vw;
-      animation: none;
+    }
+    @keyframes animateWaveDown {
+      0% {
+        transform: scale(1, .4);
+      }
+      100% {
+        transform: scale(1, 1);
+      }
+    }
+    @keyframes animateWaveUp {
+      0% {
+        transform: scale(1, 1);
+      }
+      100% {
+        transform: scale(1, 0.4);
+      }
     }
   }
 `

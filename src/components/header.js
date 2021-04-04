@@ -33,7 +33,6 @@ const TopNavbarCSS = styled.nav`
 `
 const BottomNavbarCSS = styled.nav`
   background-color: white;
-  border-top: 1px solid var(--subTextSaved);
   z-index: 5;
   position: fixed;
   bottom: 0px;

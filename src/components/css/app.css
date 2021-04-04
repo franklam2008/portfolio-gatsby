@@ -8,6 +8,10 @@
   --subTextSaved: #536171;
 }
 
+* {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
 html {
   background-color: var(--subTextSaved);
   scroll-behavior: smooth;
