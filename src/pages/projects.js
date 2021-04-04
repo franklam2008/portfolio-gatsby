@@ -85,20 +85,8 @@ export default function projects({ data }) {
                 btnName: "GitHub",
                 btnHref: "https://github.com/franklam2008/Media-Application",
                 btn2Name: "Live Site",
-                btn2Href: "https://franklam.app/",
+                btn2Href: "https://kflam.netlify.app/",
               },
-
-              {
-                title: "React E-commerce",
-                meta: "React, Gatsby, Contentful",
-                text: `Gatsby built E-commerce website with lightspeed load time and custom SEO for excellent user experience, manage product inventory with Contentful Graphql API.`,
-                imgName: "contentful.png",
-                btnName: "GitHub",
-                btnHref: "https://github.com/franklam2008/shop-gatsby",
-                btn2Name: "Live Site",
-                btn2Href: "https://shop-gatsby.netlify.com/",
-              },
-
               {
                 title: "Business E-commerce",
                 meta: "WordPress, PHP",
