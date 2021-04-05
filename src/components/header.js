@@ -14,6 +14,13 @@ const TopNavbarCSS = styled.nav`
   align-items: center;
   max-width: 100vw;
   padding: 10px 20px;
+  button {
+    background: none;
+    border: none;
+    &:focus {
+      outline: 0;
+    }
+  }
   .topNavLeft {
     display: flex;
     align-items: center;
@@ -83,9 +90,9 @@ const Header = () => {
       <TopNavbarCSS>
         {/* Left Nav */}
         <div className="topNavLeft">
-          <div onClick={() => navigationOnClick("/", dispatch)}>
+          <button onClick={() => navigationOnClick("/", dispatch)}>
             <MainIcon draggable="false" src={frankIcon} alt="main Icon" />
-          </div>
+          </button>
           <Navigation />
         </div>
         {/* Right Nav */}

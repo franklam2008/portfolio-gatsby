@@ -51,6 +51,14 @@ const MyWorkCon = styled.div`
   margin: 20px 0;
   display: flex;
   flex-direction: row;
+  button {
+    background: none;
+    border: none;
+    max-height:30px;
+    &:focus {
+      outline: 0;
+    }
+  }
 `
 
 const BottomCon = styled.div`
@@ -91,20 +99,20 @@ const IndexPage = () => {
                 <MyWorkCon>
                   <ColorHeader className="colorHeader">
                     <strong>
-                      <div
+                      <button
                         onClick={() =>
                           navigationOnClick("/projects/", dispatch)
                         }
                       >
                         My Work
-                      </div>
+                      </button>
                     </strong>
                   </ColorHeader>
-                  <div
+                  <button
                     onClick={() => navigationOnClick("/projects/", dispatch)}
                   >
                     <ArrowSvg />
-                  </div>
+                  </button>
                 </MyWorkCon>
               </Grid.Column>
             </Grid>

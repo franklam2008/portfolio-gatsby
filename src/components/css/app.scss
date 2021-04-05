@@ -8,7 +8,7 @@
   --subTextSaved: #536171;
 }
 * {
-  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 html {
   background-color: var(--subTextSaved);
@@ -30,7 +30,7 @@ h2.pageTitle {
 }
 .colorHeader {
   strong,
-  strong div {
+  strong button {
     background-image: linear-gradient(
       90deg,
       var(--mainColorSaved),
@@ -40,14 +40,14 @@ h2.pageTitle {
     -webkit-text-fill-color: transparent;
     font-family: "Montserrat", sans-serif;
   }
-  div {
+  button {
     transition: 0.2s ease-out;
     color: var(--textSaved);
     cursor: pointer;
     display: inline-block;
     text-decoration: none;
   }
-  div::after {
+  button::after {
     content: "";
     display: block;
     width: 0;
@@ -59,11 +59,10 @@ h2.pageTitle {
     );
     transition: width 0.3s;
   }
-  div:hover::after {
+  button:hover::after {
     width: 100%;
     transition: width 0.3s;
   }
-
 }
 //pageTransition
 //fix the double appear pages bug

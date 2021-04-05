@@ -2,10 +2,9 @@ import React from "react"
 import styled from "styled-components"
 
 const ArrowSvgCss = styled.span`
-    padding-left:10px;
   svg {
     cursor: pointer;
-    height:30px;
+    height: 30px;
   }
   #darkGroup {
     fill: var(--specialColorSaved);
@@ -36,11 +35,7 @@ const ArrowSvgCss = styled.span`
 export default function arrowSvg() {
   return (
     <ArrowSvgCss>
-      <svg
-        viewBox="0 0 120 100"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-      >
+      <svg viewBox="0 0 120 100" fill="none" xmlns="http://www.w3.org/2000/svg">
         <g id="triangles">
           <g id="lightGroup">
             <path

@@ -15,9 +15,7 @@ function reducer(state, action) {
       const nextPage = isPageDifferent ? action.payload : state.currentPage
       return {
         ...state,
-        // pageChanging: state.pageChanging ? false : true,
-        pageChanging: isPageDifferent,
-
+        pageChanging: isPageDifferent && !state.pageChanging ? true : false,
         currentPage: nextPage,
       }
     }
