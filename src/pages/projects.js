@@ -13,13 +13,16 @@ import Img from "gatsby-image"
 import WaveSvg from "../components/svgs/waveSvg"
 import wt from "../images/wtFrontPage.png"
 import resume from "../images/Frank_Lam.pdf"
+import { GlobalDispatchContext } from "../context/GlobalContextProvider"
 const ProjectsCon = styled.div`
   .gatsby-image-wrapper {
     width: 35px;
     float: right;
   }
 `
-export default function projects({ data }) {
+export default ({ data }) => {
+  const dispatch = React.useContext(GlobalDispatchContext)
+  dispatch({ type: "PAGE_CHANGED" })
   return (
     <Layout>
       <SEO title="Projects" />

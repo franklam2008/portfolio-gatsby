@@ -6,6 +6,7 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import { Segment, Container, Label, Grid } from "semantic-ui-react"
 import WaveSvg from "../components/svgs/waveSvg"
+import { GlobalDispatchContext } from "../context/GlobalContextProvider"
 const Skill = styled.div`
   margin: 10px auto;
   overflow: hidden;
@@ -32,7 +33,10 @@ const SkillName = styled.div`
     font-size: 0.8rem;
   }
 `
-export default function skills({ data }) {
+export default ({ data }) => {
+  const dispatch = React.useContext(GlobalDispatchContext)
+  dispatch({ type: "PAGE_CHANGED" })
+
   return (
     <Layout>
       <SEO title="Skills" />

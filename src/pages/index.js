@@ -76,6 +76,7 @@ const HomeParagraph = styled.p`
 
 const IndexPage = () => {
   const dispatch = React.useContext(GlobalDispatchContext)
+  dispatch({ type: "PAGE_CHANGED" })
   return (
     <Layout>
       <SEO title="Home" />

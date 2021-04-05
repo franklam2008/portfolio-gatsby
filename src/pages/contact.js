@@ -6,6 +6,7 @@ import SEO from "../components/seo"
 import styled from "styled-components"
 import { Container, Checkbox, Form, Button, Icon } from "semantic-ui-react"
 import WaveSvg from "../components/svgs/waveSvg"
+import { GlobalDispatchContext } from "../context/GlobalContextProvider"
 const ContactCon = styled.div`
   .contactForm {
     max-width: 500px;
@@ -43,6 +44,9 @@ export default () => {
   const nameInput = useRef()
   const phoneInput = useRef()
   const messageInput = useRef()
+  const dispatch = React.useContext(GlobalDispatchContext)
+  dispatch({ type: "PAGE_CHANGED" })
+
   return (
     <Layout>
       <SEO title="Contact" />
