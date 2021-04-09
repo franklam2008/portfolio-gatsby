@@ -1,16 +1,10 @@
 import React from "react"
 import styled from "styled-components"
-import {
-  Button,
-  Card,
-  Container,
-  Icon,
-} from "semantic-ui-react"
+import { Button, Card, Container, Icon } from "semantic-ui-react"
 import { graphql } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Img from "gatsby-image"
-import WaveSvg from "../components/svgs/waveSvg"
 import wt from "../images/wtFrontPage.png"
 import resume from "../images/Frank_Lam.pdf"
 import { GlobalDispatchContext } from "../context/GlobalContextProvider"
@@ -22,13 +16,14 @@ const ProjectsCon = styled.div`
 `
 export default ({ data }) => {
   const dispatch = React.useContext(GlobalDispatchContext)
-  dispatch({ type: "PAGE_CHANGED" })
+  React.useEffect(() => {
+    dispatch({ type: "PAGE_CHANGED" })
+  }, [dispatch])
   return (
     <Layout>
       <SEO title="Projects" />
       <ProjectsCon className=" page">
         <div className="projectsTopCon topCon"></div>
-        <WaveSvg />
         <Container fluid>
           <h2 className="pageTitle">
             Projects <br />{" "}
@@ -122,7 +117,7 @@ export default ({ data }) => {
               return (
                 <Card key={project.title}>
                   <Card.Content>
-                    <Img draggable="false"fluid={imgSrc} alt={project.title} />
+                    <Img draggable="false" fluid={imgSrc} alt={project.title} />
                     <Card.Header>{project.title}</Card.Header>
                     <Card.Meta>{project.meta}</Card.Meta>
                     <Card.Description>{project.text}</Card.Description>

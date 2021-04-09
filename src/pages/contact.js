@@ -5,7 +5,6 @@ import ContactNav from "../components/contactNav"
 import SEO from "../components/seo"
 import styled from "styled-components"
 import { Container, Checkbox, Form, Button, Icon } from "semantic-ui-react"
-import WaveSvg from "../components/svgs/waveSvg"
 import { GlobalDispatchContext } from "../context/GlobalContextProvider"
 const ContactCon = styled.div`
   .contactForm {
@@ -45,14 +44,15 @@ export default () => {
   const phoneInput = useRef()
   const messageInput = useRef()
   const dispatch = React.useContext(GlobalDispatchContext)
-  dispatch({ type: "PAGE_CHANGED" })
+  React.useEffect(() => {
+    dispatch({ type: "PAGE_CHANGED" })
+  }, [dispatch])
 
   return (
     <Layout>
       <SEO title="Contact" />
       <ContactCon className="page">
         <div className="contactTopCon topCon"></div>
-        <WaveSvg />
         <Container>
           <h2 className="pageTitle">Contact Me</h2>
           <Form className="contactForm" onSubmit={handleForm}>

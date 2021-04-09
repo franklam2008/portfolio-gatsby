@@ -5,7 +5,6 @@ import { graphql } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import { Segment, Container, Label, Grid } from "semantic-ui-react"
-import WaveSvg from "../components/svgs/waveSvg"
 import { GlobalDispatchContext } from "../context/GlobalContextProvider"
 const Skill = styled.div`
   margin: 10px auto;
@@ -35,14 +34,15 @@ const SkillName = styled.div`
 `
 export default ({ data }) => {
   const dispatch = React.useContext(GlobalDispatchContext)
-  dispatch({ type: "PAGE_CHANGED" })
+  React.useEffect(() => {
+    dispatch({ type: "PAGE_CHANGED" })
+  }, [dispatch])
 
   return (
     <Layout>
       <SEO title="Skills" />
       <div className="skillCon page">
         <div className="skillTopCon topCon"></div>
-        <WaveSvg />
 
         <Container className="skillSetCon">
           <h2 className="pageTitle">Specialized Skill Set</h2>
