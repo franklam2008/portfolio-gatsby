@@ -4,7 +4,7 @@ import styled from "styled-components"
 import Navigation from "./navigation"
 import ContactNav from "./contactNav"
 import { navigationOnClick } from "../components/helper/helper"
-import { GlobalDispatchContext } from "../context/GlobalContextProvider"
+import { useStore } from "../context/GlobalContextProvider"
 const TopNavbarCSS = styled.nav`
   background-color: var(--darkerSaved);
   position: relative;
@@ -84,7 +84,7 @@ const MainIcon = styled.img`
   max-width: 80px;
 `
 const Header = () => {
-  const dispatch = React.useContext(GlobalDispatchContext)
+  const { dispatch } = useStore()
   return (
     <header>
       <TopNavbarCSS>

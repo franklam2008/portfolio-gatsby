@@ -1,29 +1,4 @@
-.TopWave {
-  margin-left: -100px;
-  margin-top: -10px;
-  margin-bottom: -5vw;
-  max-width: 120%;
-  width: 120%;
-  transform-origin: top;
-}
 
-@include waveKeyframes(0.2, 1);
-
-@media only screen and (min-width: 1100px) {
-  .TopWave {
-    margin-left: -20px;
-    margin-bottom: -10vw;
-  }
-  @include waveKeyframes(0.2, 0.5);
-}
-
-@media only screen and (max-width: 768px) {
-  .TopWave {
-    margin-left: -20px;
-    margin-bottom: -5vw;
-  }
-  @include waveKeyframes(0.4, 1);
-}
 
 @mixin waveKeyframes($minValue, $maxValue) {
   .animatedDown {
@@ -48,4 +23,35 @@
       transform: scale(1, $minValue);
     }
   }
+}
+
+.TopWave {
+  margin-left: -100px;
+  margin-top: 0px;
+  margin-bottom: -5vw;
+  max-width: 120%;
+  width: 120%;
+  transform-origin: top;
+}
+
+.hide{
+  opacity: 0;
+}
+
+@include waveKeyframes(0, 1);
+
+@media only screen and (min-width: 1100px) {
+  .TopWave {
+    margin-left: -20px;
+    margin-bottom: -10vw;
+  }
+  @include waveKeyframes(0, .5);
+}
+
+@media only screen and (max-width: 768px) {
+  .TopWave {
+    margin-left: -20px;
+    margin-bottom: -5vw;
+  }
+  @include waveKeyframes(0, 1);
 }

@@ -2,10 +2,14 @@ import React from "react"
 import "./css/waveSvg.css"
 
 const WaveSvg = ({ pageChanging }) => {
+  const [start, setStart] = React.useState(true)
+  React.useEffect(() => {
+    window.setTimeout(() => {
+      setStart(false)
+    }, 100) // prevent weird anmination when page switchings
+  }, []) 
   return (
-    <div
-      className={pageChanging ? "TopWave animatedUp" : "TopWave animatedDown"}
-    >
+    <div className={start ? "hide" : waveClass(pageChanging)}>
       <svg
         className="topWave"
         xmlns="http://www.w3.org/2000/svg"
@@ -19,6 +23,10 @@ const WaveSvg = ({ pageChanging }) => {
       </svg>
     </div>
   )
+
+  function waveClass(pageChanging) {
+    return pageChanging ? "TopWave animatedUp" : "TopWave animatedDown"
+  }
 }
 
 export default WaveSvg

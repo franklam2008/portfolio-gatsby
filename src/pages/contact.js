@@ -5,7 +5,7 @@ import ContactNav from "../components/contactNav"
 import SEO from "../components/seo"
 import styled from "styled-components"
 import { Container, Checkbox, Form, Button, Icon } from "semantic-ui-react"
-import { GlobalDispatchContext } from "../context/GlobalContextProvider"
+import { useStore } from "../context/GlobalContextProvider"
 const ContactCon = styled.div`
   .contactForm {
     max-width: 500px;
@@ -43,7 +43,7 @@ export default () => {
   const nameInput = useRef()
   const phoneInput = useRef()
   const messageInput = useRef()
-  const dispatch = React.useContext(GlobalDispatchContext)
+  const { dispatch } = useStore()
   React.useEffect(() => {
     dispatch({ type: "PAGE_CHANGED" })
   }, [dispatch])

@@ -1,11 +1,15 @@
 .TopWave {
   margin-left: -100px;
-  margin-top: -10px;
+  margin-top: 0px;
   margin-bottom: -5vw;
   max-width: 120%;
   width: 120%;
   -webkit-transform-origin: top;
           transform-origin: top;
+}
+
+.hide {
+  opacity: 0;
 }
 
 .animatedDown {
@@ -20,8 +24,8 @@
 
 @-webkit-keyframes animateWaveDown {
   0% {
-    -webkit-transform: scale(1, 0.2);
-            transform: scale(1, 0.2);
+    -webkit-transform: scale(1, 0);
+            transform: scale(1, 0);
   }
   100% {
     -webkit-transform: scale(1, 1);
@@ -31,8 +35,8 @@
 
 @keyframes animateWaveDown {
   0% {
-    -webkit-transform: scale(1, 0.2);
-            transform: scale(1, 0.2);
+    -webkit-transform: scale(1, 0);
+            transform: scale(1, 0);
   }
   100% {
     -webkit-transform: scale(1, 1);
@@ -46,8 +50,8 @@
             transform: scale(1, 1);
   }
   100% {
-    -webkit-transform: scale(1, 0.2);
-            transform: scale(1, 0.2);
+    -webkit-transform: scale(1, 0);
+            transform: scale(1, 0);
   }
 }
 
@@ -57,8 +61,8 @@
             transform: scale(1, 1);
   }
   100% {
-    -webkit-transform: scale(1, 0.2);
-            transform: scale(1, 0.2);
+    -webkit-transform: scale(1, 0);
+            transform: scale(1, 0);
   }
 }
 
@@ -77,8 +81,8 @@
   }
   @-webkit-keyframes animateWaveDown {
     0% {
-      -webkit-transform: scale(1, 0.2);
-              transform: scale(1, 0.2);
+      -webkit-transform: scale(1, 0);
+              transform: scale(1, 0);
     }
     100% {
       -webkit-transform: scale(1, 0.5);
@@ -87,8 +91,8 @@
   }
   @keyframes animateWaveDown {
     0% {
-      -webkit-transform: scale(1, 0.2);
-              transform: scale(1, 0.2);
+      -webkit-transform: scale(1, 0);
+              transform: scale(1, 0);
     }
     100% {
       -webkit-transform: scale(1, 0.5);
@@ -101,8 +105,8 @@
               transform: scale(1, 0.5);
     }
     100% {
-      -webkit-transform: scale(1, 0.2);
-              transform: scale(1, 0.2);
+      -webkit-transform: scale(1, 0);
+              transform: scale(1, 0);
     }
   }
   @keyframes animateWaveUp {
@@ -111,8 +115,8 @@
               transform: scale(1, 0.5);
     }
     100% {
-      -webkit-transform: scale(1, 0.2);
-              transform: scale(1, 0.2);
+      -webkit-transform: scale(1, 0);
+              transform: scale(1, 0);
     }
   }
 }
@@ -132,8 +136,8 @@
   }
   @-webkit-keyframes animateWaveDown {
     0% {
-      -webkit-transform: scale(1, 0.4);
-              transform: scale(1, 0.4);
+      -webkit-transform: scale(1, 0);
+              transform: scale(1, 0);
     }
     100% {
       -webkit-transform: scale(1, 1);
@@ -142,8 +146,8 @@
   }
   @keyframes animateWaveDown {
     0% {
-      -webkit-transform: scale(1, 0.4);
-              transform: scale(1, 0.4);
+      -webkit-transform: scale(1, 0);
+              transform: scale(1, 0);
     }
     100% {
       -webkit-transform: scale(1, 1);
@@ -156,8 +160,8 @@
               transform: scale(1, 1);
     }
     100% {
-      -webkit-transform: scale(1, 0.4);
-              transform: scale(1, 0.4);
+      -webkit-transform: scale(1, 0);
+              transform: scale(1, 0);
     }
   }
   @keyframes animateWaveUp {
@@ -166,8 +170,8 @@
               transform: scale(1, 1);
     }
     100% {
-      -webkit-transform: scale(1, 0.4);
-              transform: scale(1, 0.4);
+      -webkit-transform: scale(1, 0);
+              transform: scale(1, 0);
     }
   }
 }

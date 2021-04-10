@@ -5,7 +5,7 @@ import { Container, Grid } from "semantic-ui-react"
 // components
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import { GlobalDispatchContext } from "../context/GlobalContextProvider"
+import { useStore } from "../context/GlobalContextProvider"
 import "semantic-ui-css/semantic.min.css"
 
 const HomeCon = styled.div`
@@ -36,7 +36,7 @@ const HomeParagraph = styled.p`
 `
 
 const IndexPage = () => {
-  const dispatch = React.useContext(GlobalDispatchContext)
+  const { dispatch } = useStore()
   React.useEffect(() => {
     dispatch({ type: "PAGE_CHANGED" })
   }, [dispatch])

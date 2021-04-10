@@ -2,7 +2,7 @@ import React from "react"
 import styled from "styled-components"
 import { Icon } from "semantic-ui-react"
 import { navigationOnClick } from "../components/helper/helper"
-import { GlobalDispatchContext } from "../context/GlobalContextProvider"
+import { useStore } from "../context/GlobalContextProvider"
 const NavItemCon = styled.span`
   button {
     color: var(--textSaved);
@@ -41,7 +41,7 @@ const NavItemCon = styled.span`
   }
 `
 const Navigation = () => {
-  const dispatch = React.useContext(GlobalDispatchContext)
+  const { dispatch } = useStore()
   return (
     <NavItemCon className="navItemCon">
       <button

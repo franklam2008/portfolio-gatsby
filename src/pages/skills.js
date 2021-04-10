@@ -5,7 +5,7 @@ import { graphql } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import { Segment, Container, Label, Grid } from "semantic-ui-react"
-import { GlobalDispatchContext } from "../context/GlobalContextProvider"
+import { useStore } from "../context/GlobalContextProvider"
 const Skill = styled.div`
   margin: 10px auto;
   overflow: hidden;
@@ -33,7 +33,7 @@ const SkillName = styled.div`
   }
 `
 export default ({ data }) => {
-  const dispatch = React.useContext(GlobalDispatchContext)
+  const { dispatch } = useStore()
   React.useEffect(() => {
     dispatch({ type: "PAGE_CHANGED" })
   }, [dispatch])

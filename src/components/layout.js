@@ -9,8 +9,7 @@ import "./css/app.css"
 import WaveSvg from "./svgs/waveSvg"
 import { Container, Grid } from "semantic-ui-react"
 import { navigationOnClick } from "./helper/helper"
-import { GlobalDispatchContext } from "../context/GlobalContextProvider"
-import { GlobalStateContext } from "../context/GlobalContextProvider"
+import { useStore } from "../context/GlobalContextProvider"
 import ArrowSvg from "./svgs/arrowSvg"
 
 const LayoutCon = styled.div`
@@ -70,8 +69,7 @@ const MyWorkCon = styled.div`
   }
 `
 const Layout = ({ children }) => {
-  const dispatch = React.useContext(GlobalDispatchContext)
-  const state = React.useContext(GlobalStateContext)
+  const { state, dispatch } = useStore();
   let isHomePage = false
   if (children && children[0].props.title === "Home") {
     isHomePage = true

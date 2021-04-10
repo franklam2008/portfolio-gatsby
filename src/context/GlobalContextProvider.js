@@ -1,7 +1,8 @@
 import React from "react"
 
-export const GlobalStateContext = React.createContext()
-export const GlobalDispatchContext = React.createContext()
+// export const GlobalStateContext = React.createContext()
+// export const GlobalDispatchContext = React.createContext()
+const GlobalContext = React.createContext(null);
 
 const initialState = {
   pageChanging: false,
@@ -30,15 +31,15 @@ function reducer(state, action) {
       return state
   }
 }
+export const useStore = () => React.useContext(GlobalContext);
 
 const GlobalContextProvider = ({ children }) => {
   const [state, dispatch] = React.useReducer(reducer, initialState)
+  const value = { state, dispatch };
   return (
-    <GlobalStateContext.Provider value={state}>
-      <GlobalDispatchContext.Provider value={dispatch}>
+    <GlobalContext.Provider value={value}>
         {children}
-      </GlobalDispatchContext.Provider>
-    </GlobalStateContext.Provider>
+    </GlobalContext.Provider>
   )
 }
 

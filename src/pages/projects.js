@@ -7,7 +7,7 @@ import SEO from "../components/seo"
 import Img from "gatsby-image"
 import wt from "../images/wtFrontPage.png"
 import resume from "../images/Frank_Lam.pdf"
-import { GlobalDispatchContext } from "../context/GlobalContextProvider"
+import { useStore } from "../context/GlobalContextProvider"
 const ProjectsCon = styled.div`
   .gatsby-image-wrapper {
     width: 35px;
@@ -15,7 +15,7 @@ const ProjectsCon = styled.div`
   }
 `
 export default ({ data }) => {
-  const dispatch = React.useContext(GlobalDispatchContext)
+  const { dispatch } = useStore()
   React.useEffect(() => {
     dispatch({ type: "PAGE_CHANGED" })
   }, [dispatch])
