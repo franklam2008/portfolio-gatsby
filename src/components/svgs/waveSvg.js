@@ -7,9 +7,9 @@ const WaveSvg = ({ pageChanging }) => {
     window.setTimeout(() => {
       setStart(false)
     }, 100) // prevent weird anmination when page switchings
-  }, []) 
+  }, [])
   return (
-    <div className={start ? "hide" : waveClass(pageChanging)}>
+    <div className={start ? "TopWave hide" : waveClass(pageChanging)}>
       <svg
         className="topWave"
         xmlns="http://www.w3.org/2000/svg"

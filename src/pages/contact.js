@@ -6,6 +6,7 @@ import SEO from "../components/seo"
 import styled from "styled-components"
 import { Container, Checkbox, Form, Button, Icon } from "semantic-ui-react"
 import { useStore } from "../context/GlobalContextProvider"
+import VSensorjs from "../components/VisibilitySensor"
 const ContactCon = styled.div`
   .contactForm {
     max-width: 500px;
@@ -52,78 +53,80 @@ export default () => {
     <Layout>
       <SEO title="Contact" />
       <ContactCon className="page">
-        <div className="contactTopCon topCon"></div>
-        <Container>
-          <h2 className="pageTitle">Contact Me</h2>
-          <Form className="contactForm" onSubmit={handleForm}>
-            <p>
-              Let's talk! I would love to hear your project idea, I'll get the
-              beer.
-            </p>
-            {formMsg !== "Submission Successful" ? (
-              <>
-                <Form.Field>
-                  <input
-                    className="inputSaved"
-                    type="text"
-                    ref={nameInput}
-                    placeholder="Name"
-                    required
-                  />
-                </Form.Field>
-                <Form.Field>
-                  <input
-                    className="inputSaved"
-                    type="email"
-                    ref={emailInput}
-                    placeholder="Enter email"
-                    required
-                  />
-                </Form.Field>
-                <Form.Field>
-                  <input
-                    className="inputSaved"
-                    type="tel"
-                    ref={phoneInput}
-                    placeholder="Phone Number"
-                    required
-                  />
-                </Form.Field>
+        <VSensorjs>
+          <div className="contactTopCon topCon"></div>
+          <Container>
+            <h2 className="pageTitle">Contact Me</h2>
+            <Form className="contactForm" onSubmit={handleForm}>
+              <p>
+                Let's talk! I would love to hear your project idea, I'll get the
+                beer.
+              </p>
+              {formMsg !== "Submission Successful" ? (
+                <>
+                  <Form.Field>
+                    <input
+                      className="inputSaved"
+                      type="text"
+                      ref={nameInput}
+                      placeholder="Name"
+                      required
+                    />
+                  </Form.Field>
+                  <Form.Field>
+                    <input
+                      className="inputSaved"
+                      type="email"
+                      ref={emailInput}
+                      placeholder="Enter email"
+                      required
+                    />
+                  </Form.Field>
+                  <Form.Field>
+                    <input
+                      className="inputSaved"
+                      type="tel"
+                      ref={phoneInput}
+                      placeholder="Phone Number"
+                      required
+                    />
+                  </Form.Field>
 
-                <Form.Field>
-                  <input
-                    className="inputSaved"
-                    type="text"
-                    ref={messageInput}
-                    placeholder="Message"
-                    required
-                  />
-                </Form.Field>
+                  <Form.Field>
+                    <input
+                      className="inputSaved"
+                      type="text"
+                      ref={messageInput}
+                      placeholder="Message"
+                      required
+                    />
+                  </Form.Field>
 
-                <Form.Field>
-                  <Checkbox
-                    checked={checkbox}
-                    onChange={() => setCheckbox(!checkbox)}
-                    label="Send me a SMS &amp; Email"
-                  />
-                </Form.Field>
-                <p>
-                  I'll never share your information with anyone else. it saves
-                  in Airtable securly and send you a SMS and Email via Twilio
-                  and SendGrid API.
-                </p>
-                <Button type="submit">Submit</Button>
-              </>
-            ) : (
-              <div>Thank you!</div>
-            )}
-            <span style={{ marginLeft: 10 }}>{formMsg}</span>
-          </Form>
-          <ContactNav />
-          <MadeWith>
-            Made with <Icon name="heart" /> in Pittsburgh, Pennsylvania
-          </MadeWith>
-        </Container>
+                  <Form.Field>
+                    <Checkbox
+                      checked={checkbox}
+                      onChange={() => setCheckbox(!checkbox)}
+                      label="Send me a SMS &amp; Email"
+                    />
+                  </Form.Field>
+                  <p>
+                    I'll never share your information with anyone else. it saves
+                    in Airtable securly and send you a SMS and Email via Twilio
+                    and SendGrid API.
+                  </p>
+                  <Button type="submit">Submit</Button>
+                </>
+              ) : (
+                <div>Thank you!</div>
+              )}
+              <span style={{ marginLeft: 10 }}>{formMsg}</span>
+            </Form>
+            <ContactNav />
+            <MadeWith>
+              Made with <Icon name="heart" /> in Pittsburgh, Pennsylvania
+            </MadeWith>
+          </Container>
+        </VSensorjs>
       </ContactCon>
     </Layout>
   )

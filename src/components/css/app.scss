@@ -66,15 +66,15 @@ h2.pageTitle {
 }
 //pageTransition
 //fix the double appear pages bug
-.page {
-  // position: absolute;
-  // left: 0;
-  // right: 0;
-}
+// .page {
+//   position: absolute;
+//   left: 0;
+//   right: 0;
+// }
 /* simple - enter transition 300ms, exit 150ms */
 .fade-appear,
 .fade-enter {
-  opacity: 1;
+  opacity: 0;
   z-index: 1;
 }
 .fade-appear-active,
@@ -88,8 +88,18 @@ h2.pageTitle {
 }
 .fade-exit.fade-exit-active {
   opacity: 0;
-  // transform: translate(0, -10px);
-  // transition: opacity 150ms linear, transform 150ms;
+  transform: translate(0, -10px);
+  transition: opacity 150ms linear, transform 150ms;
+}
+.invisible {
+  transition: .7s all ;
+  opacity: 0;
+  transform: translateY(20px);
+}
+.visible {
+  transition: .7s all ;
+  opacity: 1;
+  transform: translateY(0px);
 }
 @media only screen and (max-width: 768px) {
   h2.pageTitle {

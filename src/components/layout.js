@@ -33,7 +33,6 @@ const TopCon = styled.div`
     padding-bottom: 50px;
   }
 `
-
 const Title = styled.h1`
   font-size: 3.5em;
   margin: 0;
@@ -69,7 +68,7 @@ const MyWorkCon = styled.div`
   }
 `
 const Layout = ({ children }) => {
-  const { state, dispatch } = useStore();
+  const { state, dispatch } = useStore()
   let isHomePage = false
   if (children && children[0].props.title === "Home") {
     isHomePage = true

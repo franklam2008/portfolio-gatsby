@@ -7,6 +7,7 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import { useStore } from "../context/GlobalContextProvider"
 import "semantic-ui-css/semantic.min.css"
+import VSensorjs from "../components/VisibilitySensor"
 
 const HomeCon = styled.div`
   display: flex;
@@ -36,7 +37,7 @@ const HomeParagraph = styled.p`
 `
 
 const IndexPage = () => {
-  const { dispatch } = useStore()
+  const { state, dispatch } = useStore()
   React.useEffect(() => {
     dispatch({ type: "PAGE_CHANGED" })
   }, [dispatch])
@@ -46,16 +47,18 @@ const IndexPage = () => {
       <HomeCon className="page">
         <BottomCon>
           <Container>
-            <Grid>
-              <HomeParagraph>
-                Since the beginning gdays of my programming career, I've been
-                developing and building great products for businesses &amp;
-                clients. My favorite technologies right now are: React.js,
-                GraphQL, Node.js, and Firebase. I believe one of the main goals
-                for a good developer is building software for people. And I'm
-                totally in love with it all.
-              </HomeParagraph>
-            </Grid>
+            <VSensorjs>
+              <Grid>
+                <HomeParagraph>
+                  Since the beginning gdays of my programming career, I've been
+                  developing and building great products for businesses &amp;
+                  clients. My favorite technologies right now are: React.js,
+                  GraphQL, Node.js, and Firebase. I believe one of the main
+                  goals for a good developer is building software for people.
+                  And I'm totally in love with it all.
+                </HomeParagraph>
+              </Grid>
+            </VSensorjs>
           </Container>
         </BottomCon>
       </HomeCon>
