@@ -41,12 +41,12 @@ const NavItemCon = styled.span`
   }
 `
 const Navigation = () => {
-  const { dispatch } = useStore()
+  const { state, dispatch } = useStore()
   return (
     <NavItemCon className="navItemCon">
       <button
         className="navItem"
-        onClick={() => navigationOnClick("/", dispatch)}
+        onClick={() => navigationOnClick("/", dispatch, state.currentPage)}
       >
         {" "}
         <Icon name="home" />
@@ -54,7 +54,9 @@ const Navigation = () => {
       </button>
       <button
         className="navItem"
-        onClick={() => navigationOnClick("/projects/", dispatch)}
+        onClick={() =>
+          navigationOnClick("/projects/", dispatch, state.currentPage)
+        }
       >
         {" "}
         <Icon name="suitcase" />
@@ -62,7 +64,9 @@ const Navigation = () => {
       </button>
       <button
         className="navItem"
-        onClick={() => navigationOnClick("/skills/", dispatch)}
+        onClick={() =>
+          navigationOnClick("/skills/", dispatch, state.currentPage)
+        }
       >
         {" "}
         <Icon name="wrench" />
@@ -70,7 +74,9 @@ const Navigation = () => {
       </button>
       <button
         className="navItem"
-        onClick={() => navigationOnClick("/contact/", dispatch)}
+        onClick={() =>
+          navigationOnClick("/contact/", dispatch, state.currentPage)
+        }
       >
         {" "}
         <Icon name="mail outline" />

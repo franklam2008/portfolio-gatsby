@@ -13,13 +13,17 @@
 }
 
 .animatedDown {
-  -webkit-animation: animateWaveDown 2000ms cubic-bezier(0.23, 1, 0.32, 1) forwards;
-          animation: animateWaveDown 2000ms cubic-bezier(0.23, 1, 0.32, 1) forwards;
+  -webkit-animation: animateWaveDown 400ms linear;
+          animation: animateWaveDown 400ms linear;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
 }
 
 .animatedUp {
-  -webkit-animation: animateWaveUp 2000ms cubic-bezier(0.23, 1, 0.32, 1) forwards;
-          animation: animateWaveUp 2000ms cubic-bezier(0.23, 1, 0.32, 1) forwards;
+  -webkit-animation: animateWaveUp 200ms linear;
+          animation: animateWaveUp 200ms linear;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
 }
 
 @-webkit-keyframes animateWaveDown {
@@ -72,12 +76,16 @@
     margin-bottom: -10vw;
   }
   .animatedDown {
-    -webkit-animation: animateWaveDown 2000ms cubic-bezier(0.23, 1, 0.32, 1) forwards;
-            animation: animateWaveDown 2000ms cubic-bezier(0.23, 1, 0.32, 1) forwards;
+    -webkit-animation: animateWaveDown 400ms linear;
+            animation: animateWaveDown 400ms linear;
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
   }
   .animatedUp {
-    -webkit-animation: animateWaveUp 2000ms cubic-bezier(0.23, 1, 0.32, 1) forwards;
-            animation: animateWaveUp 2000ms cubic-bezier(0.23, 1, 0.32, 1) forwards;
+    -webkit-animation: animateWaveUp 200ms linear;
+            animation: animateWaveUp 200ms linear;
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
   }
   @-webkit-keyframes animateWaveDown {
     0% {
@@ -128,12 +136,16 @@
     margin-bottom: -5vw;
   }
   .animatedDown {
-    -webkit-animation: animateWaveDown 2000ms cubic-bezier(0.23, 1, 0.32, 1) forwards;
-            animation: animateWaveDown 2000ms cubic-bezier(0.23, 1, 0.32, 1) forwards;
+    -webkit-animation: animateWaveDown 400ms linear;
+            animation: animateWaveDown 400ms linear;
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
   }
   .animatedUp {
-    -webkit-animation: animateWaveUp 2000ms cubic-bezier(0.23, 1, 0.32, 1) forwards;
-            animation: animateWaveUp 2000ms cubic-bezier(0.23, 1, 0.32, 1) forwards;
+    -webkit-animation: animateWaveUp 200ms linear;
+            animation: animateWaveUp 200ms linear;
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
   }
   @-webkit-keyframes animateWaveDown {
     0% {

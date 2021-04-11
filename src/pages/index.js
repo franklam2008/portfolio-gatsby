@@ -37,7 +37,7 @@ const HomeParagraph = styled.p`
 `
 
 const IndexPage = () => {
-  const { state, dispatch } = useStore()
+  const { dispatch } = useStore()
   React.useEffect(() => {
     dispatch({ type: "PAGE_CHANGED" })
   }, [dispatch])

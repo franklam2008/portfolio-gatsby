@@ -92,15 +92,23 @@ h2.pageTitle {
   transition: opacity 150ms linear, transform 150ms;
 }
 .invisible {
-  transition: .7s all ;
+  transition: 0.7s all;
   opacity: 0;
   transform: translateY(20px);
 }
 .visible {
-  transition: .7s all ;
+  transition: 0.7s all;
   opacity: 1;
   transform: translateY(0px);
 }
+.homePageTopConEnter {
+  transform: translate(0, -100%);
+}
+
+.homePageTopConActive {
+  transform: translate(0, 0);
+}
+
 @media only screen and (max-width: 768px) {
   h2.pageTitle {
     font-size: 1.5em;

@@ -28,6 +28,7 @@ const TopCon = styled.div`
   padding-top: 100px;
   background-color: var(--darkerSaved);
   color: var(--textSaved);
+  transition: transform 300ms linear;
   @media (max-width: 600px) {
     padding-top: 120px;
     padding-bottom: 50px;
@@ -69,15 +70,28 @@ const MyWorkCon = styled.div`
 `
 const Layout = ({ children }) => {
   const { state, dispatch } = useStore()
-  let isHomePage = false
-  if (children && children[0].props.title === "Home") {
-    isHomePage = true
-  }
+  const [start, setStart] = React.useState(true)
+  const isHomePage = children && children[0].props.title === "Home"
+  React.useEffect(() => {
+    window.setTimeout(() => {
+      setStart(false)
+    }, 50) // prevent weird anmination when page switchings
+  }, [])
+
+  React.useEffect(() => {
+    if (isHomePage && state.pageChanging && state.currentPage !== "/") {
+      window.setTimeout(() => {
+        setStart(true)
+      }, 200) // going back up
+    }
+  }, [state.pageChanging])
   return (
     <LayoutCon>
       <Header />
       {isHomePage ? (
-        <TopCon>
+        <TopCon
+          className={start ? "homePageTopConEnter" : "homePageTopConActive"}
+        >
           <Container>
             <Grid>
               <Grid.Column md={6}>
@@ -89,7 +103,11 @@ const Layout = ({ children }) => {
                     <strong>
                       <button
                         onClick={() =>
-                          navigationOnClick("/projects/", dispatch)
+                          navigationOnClick(
+                            "/projects/",
+                            dispatch,
+                            state.currentPage
+                          )
                         }
                       >
                         My Work
@@ -97,7 +115,13 @@ const Layout = ({ children }) => {
                     </strong>
                   </ColorHeader>
                   <button
-                    onClick={() => navigationOnClick("/projects/", dispatch)}
+                    onClick={() =>
+                      navigationOnClick(
+                        "/projects/",
+                        dispatch,
+                        state.currentPage
+                      )
+                    }
                   >
                     <ArrowSvg />
                   </button>
@@ -109,7 +133,7 @@ const Layout = ({ children }) => {
       ) : (
         <></>
       )}
-      <WaveSvg pageChanging={state.pageChanging} />
+      <WaveSvg pageChanging={state.pageChanging} state={state} />
       <Main>{children}</Main>
       <Footer>
         © {new Date().getFullYear()} Frank Lam, Built with GatsbyJS

@@ -1,13 +1,17 @@
 import React from "react"
 import "./css/waveSvg.css"
 
-const WaveSvg = ({ pageChanging }) => {
+const WaveSvg = ({ state }) => {
+  const { currentPage, pageChanging } = state
   const [start, setStart] = React.useState(true)
+  const toHomePage = currentPage === "/" // homePage
+  const waveInitDelay = toHomePage ? 350 : 50
   React.useEffect(() => {
     window.setTimeout(() => {
       setStart(false)
-    }, 100) // prevent weird anmination when page switchings
+    }, waveInitDelay) // prevent weird anmination when page switchings
   }, [])
+
   return (
     <div className={start ? "TopWave hide" : waveClass(pageChanging)}>
       <svg
