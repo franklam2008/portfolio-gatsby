@@ -85,7 +85,7 @@ export default ({ data }) => {
                     >
                       <Skill>
                         <Img
-                          draggable="false"
+                          draggable={false}
                           fluid={imgSrc}
                           alt={skill.name}
                         />
@@ -124,7 +124,7 @@ export default ({ data }) => {
                     >
                       <Skill>
                         <Img
-                          draggable="false"
+                          draggable={false}
                           fluid={imgSrc}
                           alt={skill.name}
                         />
@@ -161,7 +161,7 @@ export default ({ data }) => {
                     >
                       <Skill>
                         <Img
-                          draggable="false"
+                          draggable={false}
                           fluid={imgSrc}
                           alt={skill.name}
                         />

@@ -10,6 +10,7 @@ const WaveSvg = ({ state }) => {
     window.setTimeout(() => {
       setStart(false)
     }, waveInitDelay) // prevent weird anmination when page switchings
+    // eslint-disable-next-line
   }, [])
 
   return (

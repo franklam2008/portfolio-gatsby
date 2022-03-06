@@ -92,7 +92,7 @@ const Header = () => {
         {/* test comment */}
         <div className="topNavLeft">
           <button onClick={() => navigationOnClick("/", dispatch)}>
-            <MainIcon draggable="false" src={frankIcon} alt="main Icon" />
+            <MainIcon draggable={false} src={frankIcon} alt="main Icon" />
           </button>
           <Navigation />
         </div>

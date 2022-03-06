@@ -121,7 +121,7 @@ export default ({ data }) => {
                   <Card key={project.title}>
                     <Card.Content>
                       <Img
-                        draggable="false"
+                        draggable={false}
                         fluid={imgSrc}
                         alt={project.title}
                       />
