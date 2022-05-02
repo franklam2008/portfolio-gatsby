@@ -31,11 +31,43 @@ h2.pageTitle {
 .colorHeader {
   strong,
   strong button {
-    background-image: linear-gradient(
+    // background: linear-gradient(
+    //   90deg,
+    //   var(--mainColorSaved),
+    //   var(--specialColorSaved)
+    // );
+    background: #ffad26; /* Old browsers */
+    background: -moz-linear-gradient(
       90deg,
       var(--mainColorSaved),
       var(--specialColorSaved)
-    );
+    ); /* FF3.6+ */
+    background: -webkit-gradient(
+      90deg,
+      var(--mainColorSaved),
+      var(--specialColorSaved)
+    ); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(
+      90deg,
+      var(--mainColorSaved),
+      var(--specialColorSaved)
+    ); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(
+      90deg,
+      var(--mainColorSaved),
+      var(--specialColorSaved)
+    ); /* Opera 11.10+ */
+    background: -ms-linear-gradient(
+      90deg,
+      var(--mainColorSaved),
+      var(--specialColorSaved)
+    ); /* IE10+ */
+    background: linear-gradient(
+      90deg,
+      var(--mainColorSaved),
+      var(--specialColorSaved)
+    ); /* W3C */
+
     background-clip: text;
     -webkit-text-fill-color: transparent;
     font-family: "Montserrat", sans-serif;
