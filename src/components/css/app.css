@@ -33,6 +33,19 @@ h2.pageTitle {
   margin-bottom: 40px;
 }
 
+.desktopColorHeader strong,
+.desktopColorHeader strong button {
+  background-image: -webkit-gradient(linear, left top, right top, from(var(--mainColorSaved)), to(var(--specialColorSaved)));
+  background-image: linear-gradient(90deg, var(--mainColorSaved), var(--specialColorSaved));
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.mobileColorHeader strong,
+.mobileColorHeader strong button {
+  color: var(--mainColorSaved);
+}
+
 .colorHeader strong,
 .colorHeader strong button {
   font-family: "Montserrat", sans-serif;
