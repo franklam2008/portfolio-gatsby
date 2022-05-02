@@ -28,28 +28,15 @@ h2.pageTitle {
   color: rgb(74, 74, 74);
   margin-bottom: 40px;
 }
-.desktopColorHeader {
-  strong,
-  strong button {
-    background-image: linear-gradient(
-      90deg,
-      var(--mainColorSaved),
-      var(--specialColorSaved)
-    );
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-  }
-}
-.mobileColorHeader {
-  strong,
-  strong button {
-    color: var(--mainColorSaved);
-  }
-}
 .colorHeader {
   strong,
   strong button {
+    color: var(--mainColorSaved);
     font-family: "Montserrat", sans-serif;
+  }
+  a{
+    color: var(--mainColorSaved);
+
   }
   button {
     transition: 0.2s ease-out;

@@ -11,7 +11,6 @@ import { Container, Grid } from "semantic-ui-react"
 import { navigationOnClick } from "./helper/helper"
 import { useStore } from "../context/GlobalContextProvider"
 import ArrowSvg from "./svgs/arrowSvg"
-import { isMobile } from "react-device-detect"
 const LayoutCon = styled.div`
   display: flex;
   flex-direction: column;
@@ -100,13 +99,7 @@ const Layout = ({ children }) => {
                 <Title>I build amazing experiences</Title>
                 <SubTitle>Web Developer from Pittsburgh, PA</SubTitle>
                 <MyWorkCon>
-                  <ColorHeader
-                    className={
-                      isMobile
-                        ? "mobileColorHeader colorHeader"
-                        : "desktopColorHeader colorHeader"
-                    }
-                  >
+                  <ColorHeader className="colorHeader">
                     <strong>
                       <button
                         onClick={() =>
