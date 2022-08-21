@@ -43,7 +43,7 @@ export default ({ data }) => {
                 {
                   title: "Carnegie Learning",
                   meta: "Angular, TypeScript, Ngrx, RxJS",
-                  text: `Collaborated with a multidisciplinary group of educational professionals to develop and deploy educational software used across the U.S. within the K-12 curriculum. Improved structural layout and added strict-typing to existing Angular codebase.`,
+                  text: `Built and maintained a few Angular applications used by thousands of customers daily. Collaborated with a multidisciplinary group of educational professionals to develop and deploy educational software used across the U.S. within the K-12 curriculum. Improved structural layout, added strict-typing, and developed the legacy applications.`,
                   imgName: "cl.png",
                   btnName: "GitHub",
                   btnHref:
@@ -54,7 +54,7 @@ export default ({ data }) => {
                 {
                   title: "Huntington Bank BAO",
                   meta: "Angular, TypeScript, Ngrx, RxJS",
-                  text: `Worked on Angular project for Huntington bank Business Account Opening flow. Utilized TypeScript, Ngrx and RxJS for app state management. Unfortunately, I cannot showcase code here for banking security reason.`,
+                  text: `Worked on Angular projects for Huntington bank Business Account Opening flow. Utilized TypeScript, Ngrx and RxJS for app state management. Unfortunately, I cannot showcase code here for banking security reason.`,
                   imgName: "hnb.png",
                   btn2Name: "Live Site",
                   btn2Href:
