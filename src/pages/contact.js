@@ -123,7 +123,7 @@ export default () => {
             </Form>
             <ContactNav />
             <MadeWith>
-              Made with <Icon name="heart" /> in Pittsburgh, Pennsylvania
+              Made with <Icon name="heart" /> in Austin, Texas
             </MadeWith>
           </Container>
         </VSensorjs>

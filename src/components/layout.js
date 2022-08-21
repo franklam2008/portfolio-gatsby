@@ -97,7 +97,7 @@ const Layout = ({ children }) => {
               <Grid.Column md={6}>
                 <SubTitle>Hi, I'm Frank!</SubTitle>
                 <Title>I build amazing experiences</Title>
-                <SubTitle>Web Developer from Pittsburgh, PA</SubTitle>
+                <SubTitle>Web Developer from Austin, TX</SubTitle>
                 <MyWorkCon>
                   <ColorHeader className="colorHeader">
                     <strong>
