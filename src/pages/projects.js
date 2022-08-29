@@ -49,7 +49,7 @@ export default ({ data }) => {
                   btnHref:
                     "https://github.com/CarnegieLearningWeb/passport-frontend-v2",
                   btn2Name: "Live Site",
-                  btn2Href: "https://passport.qa-cli.com/#/login/form",
+                  btn2Href: "https://www.carnegielearning.com/login/#/",
                 },
                 {
                   title: "Huntington Bank BAO",
