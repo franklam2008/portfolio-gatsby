@@ -43,7 +43,7 @@ export default ({ data }) => {
                 {
                   title: "Carnegie Learning",
                   meta: "Angular, TypeScript, Ngrx, RxJS",
-                  text: `Built and maintained a few Angular applications used by thousands of customers daily. Collaborated with a multidisciplinary group of educational professionals to develop and deploy educational software used across the U.S. within the K-12 curriculum. Improved structural layout, added strict-typing, and developed the legacy applications.`,
+                  text: `Experienced in building and maintaining Angular applications utilized by thousands of customers daily. Collaborated with a diverse group of educational professionals to design and deploy educational software across the K-12 curriculum in the U.S. Improved structural layout, implemented strict-typing, and developed legacy applications to enhance functionality and user experience`,
                   imgName: "cl.png",
                   btnName: "GitHub",
                   btnHref:
@@ -54,7 +54,7 @@ export default ({ data }) => {
                 {
                   title: "Huntington Bank BAO",
                   meta: "Angular, TypeScript, Ngrx, RxJS",
-                  text: `Worked on Angular projects for Huntington bank Business Account Opening flow. Utilized TypeScript, Ngrx and RxJS for app state management. Unfortunately, I cannot showcase code here for banking security reason.`,
+                  text: `Involved in Angular projects for Huntington Bank's Business Online Account Opening flow, utilizing Agile Scrum methodologies. Expertise in using TypeScript, Ngrx, and RxJS for app state management and component implementation. Improved code unit test coverage from 11% to 80% with the use of Jest testing framework, ensuring the quality of the release branch`,
                   imgName: "hnb.png",
                   btn2Name: "Live Site",
                   btn2Href:
@@ -63,7 +63,7 @@ export default ({ data }) => {
                 {
                   title: "this.Portfolio",
                   meta: "React, Gatsby, Semantic UI",
-                  text: `React built portfolio with Gatsby JS and Semantic UI design. It is deployed in a cPanel hosting server, FastComet.`,
+                  text: `Built a portfolio utilizing React and Gatsby JS, incorporating a design inspired by Semantic UI. The portfolio is hosted on a serverless Netlify platform for optimized performance and reliability.`,
                   imgName: "gatsby.png",
                   btnName: "GitHub",
                   btnHref: "https://github.com/franklam2008/Portfolio",
@@ -71,7 +71,7 @@ export default ({ data }) => {
                 {
                   title: "Professional Banking Dashboard",
                   meta: "React, Create-React-App, Material UI",
-                  text: `React built professional banking dashboard with Redux for state management and Material UI design`,
+                  text: `Developed a professional banking dashboard using React and Redux for state management, with a user-friendly design based on Material UI.`,
                   imgName: "garden.png",
                   btnName: "GitHub",
                   btnHref: "https://github.com/franklam2008/banking-dashboard",
@@ -81,7 +81,7 @@ export default ({ data }) => {
                 {
                   title: "Media Application",
                   meta: "React, FireBase, Bootstrap",
-                  text: `Media Single Page React Application built with FireBase authentication. Custom UX/UI design with Bootstrap. Hosting in serverless Netlify.`,
+                  text: `Media-focused single page React application, featuring FireBase authentication. Customized the user experience with a unique UX/UI design using Bootstrap. Hosted the application on a serverless Netlify platform for efficient and scalable performance.`,
                   imgName: "react1.png",
                   btnName: "GitHub",
                   btnHref: "https://github.com/franklam2008/Media-Application",
@@ -91,10 +91,7 @@ export default ({ data }) => {
                 {
                   title: "Business E-commerce",
                   meta: "WordPress, PHP",
-                  text: ` WordPress built E-commerce website that generate over hundred
-              thousand sales via the utilization of Getresponse and Pipedrive
-              for custom HTML email marketing campaign and CRM. Live chat
-              integrates with Tidio and Zendesk for the support ticket system.`,
+                  text: `Developed an E-commerce website using WordPress, which has generated over hundred thousand sales through the integration of Getresponse and Pipedrive for custom HTML email marketing campaigns and CRM. The website also includes live chat functionality powered by Tidio and a support ticket system using Zendesk.`,
                   imgName: "wordPress1.png",
                   btnName: "Showcase",
                   btnHref: wt,
@@ -102,9 +99,7 @@ export default ({ data }) => {
                 {
                   title: "Node Js App",
                   meta: "Node, Express, MongoDB",
-                  text: `Handles API requests and submit to Airtable, Twilio and
-              SendGrid. It also perform Web Scraping with Puppeteer in order
-              to collect information from other existing website.`,
+                  text: `Manages API requests and submits them to Airtable, Twilio, and SendGrid. Also performs web scraping with Puppeteer to gather information from other websites.`,
                   imgName: "express.png",
                   btnName: "GitHub",
                   btnHref: "https://github.com/franklam2008/WebScrapingAPI",
