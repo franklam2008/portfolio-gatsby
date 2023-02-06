@@ -50,12 +50,12 @@ const IndexPage = () => {
             <VSensorjs>
               <Grid>
                 <HomeParagraph>
-                  Since the beginning days of my programming career, I've been
-                  developing and building great products for businesses &amp;
-                  clients. My favorite technologies right now are Angular 2 and
-                  MERN stack. I believe one of the main goals for a good
-                  developer is building software for people. And I'm totally in
-                  love with it all.
+                  As a programmer, I have extensive experience creating
+                  innovative products for businesses and clients. Currently, I
+                  specialize in Angular 2 and the MERN stack, and my focus is
+                  always on developing software that solves real problems for
+                  real people. I am deeply passionate about the field of
+                  software development..
                 </HomeParagraph>
               </Grid>
             </VSensorjs>
