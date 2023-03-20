@@ -50,12 +50,12 @@ const IndexPage = () => {
             <VSensorjs>
               <Grid>
                 <HomeParagraph>
-                  As a programmer, I have extensive experience creating
-                  innovative products for businesses and clients. Currently, I
-                  specialize in Angular 2 and the MERN stack, and my focus is
-                  always on developing software that solves real problems for
-                  real people. I am deeply passionate about the field of
-                  software development..
+                  I possess significant expertise in developing cutting-edge
+                  products for businesses and clients as a programmer. My
+                  current area of specialization is in Angular 2 and the MERN
+                  stack, and my primary goal is to create software that
+                  addresses real-world problems for individuals. My unwavering
+                  enthusiasm for software development is one of my key traits.
                 </HomeParagraph>
               </Grid>
             </VSensorjs>
